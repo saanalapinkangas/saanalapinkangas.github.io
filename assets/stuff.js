@@ -20,3 +20,23 @@ function animateArrow() {
 
     setInterval(animateArrow, 1000 / 60); // Kutsu animateArrow-funktiota 60 kertaa sekunnissa
 };
+
+// lisää gallerian aktiivisuus > kun mouseOver, ilmestyy kuvan tiedot näkyviin
+document.addEventListener("DOMContentLoaded", function () {
+    const kuvainfoElements = document.querySelectorAll('.kuvainfo');
+
+    kuvainfoElements.forEach((kuvainfo) => {
+        const parent = kuvainfo.parentElement;
+
+        // Kun hiiri menee kuvan päälle (hover)
+        parent.addEventListener('mouseenter', () => {
+            kuvainfo.style.display = 'block';
+        });
+
+        // Kun hiiri poistuu kuvan päältä
+        parent.addEventListener('mouseleave', () => {
+            kuvainfo.style.display = 'none';
+        });
+    });
+});
+

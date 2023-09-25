@@ -1,0 +1,119 @@
+/* Container-tyyli */
+.container {
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 71.25rem;
+  width: 100%;
+}
+
+/* Grid-tyyli */
+.grid {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+}
+.grid > [class*="column-"] {
+  display: block;
+}
+
+/* Ensimmäinen ja viimeinen saraketyylit */
+.first {
+  order: -1;
+}
+.last {
+  order: 12;
+}
+
+/* Täsmäytystyylit */
+.align-top {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-bottom {
+  align-items: flex-end;
+}
+
+/* Media Queryt ja sarakkeiden generointi */
+@for $i from 1 through 12 {
+  .column-xs-#{$i} {
+    flex-basis: #{($i / 12) * 100%};
+    max-width: #{($i / 12) * 100%};
+  }
+}
+
+@media (min-width: 48rem) {
+  @for $i from 1 through 12 {
+    .column-sm-#{$i} {
+      flex-basis: #{($i / 12) * 100%};
+      max-width: #{($i / 12) * 100%};
+    }
+  }
+}
+
+@media (min-width: 62rem) {
+  @for $i from 1 through 12 {
+    .column-md-#{$i} {
+      flex-basis: #{($i / 12) * 100%};
+      max-width: #{($i / 12) * 100%};
+    }
+  }
+}
+
+@media (min-width: 75rem) {
+  @for $i from 1 through 12 {
+    .column-lg-#{$i} {
+      flex-basis: #{($i / 12) * 100%};
+      max-width: #{($i / 12) * 100%};
+    }
+  }
+}
+
+/* Gridin sarakkeiden tuki CSS Gridilla */
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+  }
+  .grid > [class*="column-"] {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  /* Gridin sarakkeiden generointi */
+  @for $i from 1 through 12 {
+    .column-xs-#{$i} {
+      grid-column-start: span #{$i};
+      grid-column-end: span #{$i};
+    }
+  }
+
+  @media (min-width: 48rem) {
+    @for $i from 1 through 12 {
+      .column-sm-#{$i} {
+        grid-column-start: span #{$i};
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @media (min-width: 62rem) {
+    @for $i from 1 through 12 {
+      .column-md-#{$i} {
+        grid-column-start: span #{$i};
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @media (min-width: 75rem) {
+    @for $i from 1 through 12 {
+      .column-lg-#{$i} {
+        grid-column-start: span #{$i};
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+}
