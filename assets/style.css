@@ -202,18 +202,15 @@ body {
 .kuvainfo {
     position: absolute;
     bottom: 30%;
-    left: 15%;
-    width: 70%;
+    left: 10%;
+    width: 80%;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 5px;
     display: none;
 }
 
-.img_zoom:hover .kuvainfo {
-    display: block; /* Näytetään hover-tilassa */
-    opacity: 1; /* Näytetään pehmeällä siirtymällä */
-}
+/* skrollaus */
 
 
 
