@@ -11,10 +11,10 @@
 
 <body>
     <!--eka dia-->
-    <div class="aloitus">
+    <div class="aloitus" id="aloitus">
         <img class="logokuva"
             src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/logo_portf.png">
-        <div class="bounce"></div>
+        <a href="#portfolio"><div class="bounce"></div></a>
         <script>
             animateArrow();
         </script>
@@ -36,14 +36,14 @@
             </div>
             <div class="nav_linkit">
                 <div class="nav_animaatio">
-                    <a>home</a>
-                    <a>portfolio</a>
+                    <a href="#aloitus">home</a>
+                    <a href="#portfolio">portfolio</a>
                     <a>about me</a>
-                    <a>contact</a>
+                    <a href="#footer">contact</a>
                 </div>
             </div>
         </div>
-        <div class="dia2">
+        <div class="dia2" id="portfolio">
         <div class="dia2_sisalto">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas posuere posuere. Morbi ante mauris,
                 pulvinar nec convallis nec, vehicula quis felis. Etiam sed feugiat nisl, et scelerisque purus. Nulla
@@ -140,7 +140,7 @@
 </div>
 
 <!-- footer -->
-<div class="footer">
+<div class="footer" id="footer">
     <div class="footer_sisalto">
         <div class="footer_contact">
             <p>Saana Lapinkangas</p>
