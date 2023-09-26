@@ -212,6 +212,73 @@ body {
 
 /* skrollaus */
 
+/* dia 3, footer ******************/
+
+.footer {
+    background-color: #465D55;
+    height: 100vh;
+    margin: 0;
+    color: #EEEDEB;
+}
+
+.footer_sisalto {
+    margin: 10%;
+    display: flex;
+}
+
+.footer_contact {
+    float: left;
+    width: 50%;
+    margin-top: 15%;
+    font-size: 15px;
+}
+
+.footer_lomake {
+    float: right;
+    width: 50%;
+}
+
+.footer_copyright {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+  /* footer, sosiaalinen media */
+  .footer_sosmedia {
+    float: left;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .footer_sosmedia ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer_sosmedia li {
+    display: inline;
+    padding-left: 8px;
+  }
+
+  .footer_sosmedia a {
+    font-size: 18px;
+    padding: 10px 14px;
+    text-align: center;
+    transition: .5s;
+    background-color: #ECCEC3;
+    border-radius: 50%;
+    color: #465D55;
+  }
+
+  .footer_sosmedia a:hover {
+    color: #ECCEC3;
+    background-color: #465D55;
+    opacity: 0.8;
+  }
+
 
 
 
