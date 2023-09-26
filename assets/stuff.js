@@ -39,3 +39,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// navigaatio
+document.addEventListener("DOMContentLoaded", function () {
+    const navigaatio = document.getElementById("navigaatio");
+    const aloitus = document.querySelector(".aloitus");
+
+    // Lisää event listener sivun skrollaukselle
+    window.addEventListener("scroll", function () {
+        // Tarkista, onko aloitus-div ohitettu
+        const aloitusRect = aloitus.getBoundingClientRect();
+        if (aloitusRect.bottom <= 0) {
+            // Näytä navigaatiopalkki
+            navigaatio.style.top = "0";
+        } else {
+            // Piilota navigaatiopalkki
+            navigaatio.style.top = "-70px";
+        }
+    });
+});

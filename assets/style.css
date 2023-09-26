@@ -50,9 +50,19 @@ body {
   }
 
   /* navigaatio */
-  .navigaatio {
+  #navigaatio {
     background-color: #465D55;
-    position: sticky;
+    position: fixed; /* Kiinnitä navigaatiopalkki */
+    top: -70px; /* Piilota se alussa sivun yläpuolella */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Varmista, että navigaatio näkyy päällä */
+    transition: top 0.3s; /* Lisää sulavuus liikkeelle */
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    /*alkuperäinen
+    background-color: #465D55;
+    position: fixed;
+    /*position: sticky;*/
     height: 70px;
     width: 100%;
     margin: 0;
@@ -60,7 +70,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);*/
   }
 
   /* navigaatio, sosiaalinen media */
