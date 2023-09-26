@@ -1,4 +1,3 @@
-- lisää pomppivaan nuoleen ankkurointi portfolio-siirtymään
 - linkit
 - skrollautuvuus ja navin asettelu
 
