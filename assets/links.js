@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var facebookLink = document.getElementById("fb");
     var instagramLink = document.getElementById("insta");
-    var githubLink = document.getElementById("git");
-    var linkedinLink = document.getElementById("lin");
+    var githubLink = document.getElementById("github");
+    var linkedinLink = document.getElementById("linkedin");
     var aloitusLink = document.getElementById("aloitus-link");
     var portfolioLink = document.getElementById("portfolio-link");
     var aboutMeLink = document.getElementById("aboutme");
