@@ -11,6 +11,7 @@ body {
     text-align: left;
     line-height: 1.5;
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 
@@ -130,13 +131,22 @@ body {
 
 .kehys {
     margin-top: 130px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* sisällön kehys */
 .sisalto {
+    float: left;
     margin: auto;
-    width: 60%;
+    width: 80%;
     min-height: 80vh;
+    align-items: center;
 }
 
 
@@ -163,7 +173,7 @@ h2 {
 }
 
 .sisalto p {
-    width: 60%;
+    width: 90%;
 }
 
 
@@ -190,7 +200,7 @@ h2 {
 /* edellinen ja seuraava -buttonit */
 
 .previousnext {
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -201,7 +211,7 @@ h2 {
 
 .previous {
     float: left;
-    padding-left: 20%;
+    padding-left: 10%;
 }
 
 .next {
@@ -339,10 +349,44 @@ h2 {
     }
 
 
+    /*testi*/
+    
+    #vaihdaNappi {
+        float: right;
+        border-radius: 25px;
+        background-color: #ECCEC3;
+        padding: 10px 20px;
+        font-family: 'Poppins', Helvetica;
+        color: #454344;
+        font-size: 10px;
+        font-weight: 300;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    #vaihdaNappi:hover {
+        background-color: #AEB2A5;
+        color: white;
+    }
+
+    .nayta {
+        display: block;
+    }
+    
+    .piilossa {
+        display: none;
+    }
+
+
 /* RESPONSIIVISUUS ************************************/
 
 @media (max-width: 520px) {
 
+    .kehys {
+        width: 90%;
+    }
     /* sisällön kehys */
     .sisalto {
         width: 90%;
