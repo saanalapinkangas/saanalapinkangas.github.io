@@ -3,11 +3,13 @@
 
 body {
     background-color: #F8F8F8;
-    font-size: 12px;
-    color: #393939;
-    font-family: Helvetica, Arial, "sans-serif";
+    font-size: 14px;
+    color: #454344;
+    font-family: 'Open+Sans', Helvetica;
+    font-weight: 300;
     letter-spacing: 0.8;
     text-align: justify;
+    line-height: 1.5;
     height: 100%;
     margin: 0;
 }
@@ -134,6 +136,7 @@ body {
     }
 
     .nav_linkit a {
+        font-family: 'Poppins', Helvetica;
         color: #F4C67B;
         text-decoration: none;
         font-weight: lighter;
@@ -223,9 +226,23 @@ body {
         left: 10%;
         width: 80%;
         background-color: rgba(0, 0, 0, 0.7);
-        color: white;
         padding: 5px;
         display: none;
+    }
+
+    .kuvainfo h1 {
+        font-family: 'Poppins', Helvetica;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .kuvainfo p{
+        font-family: 'Poppins', Helvetica;
+        font-size: 13px;
+        font-weight: 300;
+        color: white;
     }
 
     /* dia 3, footer ******************/
@@ -255,8 +272,12 @@ body {
 
     .footer_copyright {
         width: 100%;
-        font-size: 12px;
+        font-family: 'Poppins', Arial;
+        color: gray;
+        font-size: 9px;
         text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.8;
         margin-bottom: 10px;
     }
 
