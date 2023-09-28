@@ -68,21 +68,6 @@ body {
         align-items: center;
         flex-direction: row;
     }
-    .navigaatio_muut {
-        background-color: #465D55;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-        transition: top 0.3s;
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
-        height: 70px;
-        width: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
 
     /* navigaatio, sosiaalinen media */
     .nav_sosmedia {
@@ -251,7 +236,7 @@ body {
     /* dia 3, footer ******************/
     .footer {
         background-color: #465D55;
-        height: 100vh;
+        max-height: 80vh;
         margin: 0;
         color: #EEEDEB;
     }
@@ -259,6 +244,9 @@ body {
     .footer_sisalto {
         margin: 10%;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer_contact {
@@ -281,7 +269,7 @@ body {
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1.8;
-        margin-bottom: 10px;
+        padding-bottom: 20px;
     }
 
     /* footer, sosiaalinen media */
@@ -320,190 +308,87 @@ body {
 
 
 
+    /* RESPONSIIVISUUS ************************************/
 
-    /************************** tämän yläpuolella oleva koodi käytössä ***************************/
+@media (max-width: 520px) {
 
-    .aloitus p {
-        font-size: 40px;
-        text-transform: uppercase;
-        font-weight: lighter;
-        color: white;
-    }
 
-    .button_sisalto {
-        width: 70%;
-        display: flex;
-        margin: 0 auto;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    .button_etusivu {
-        background-color: #3f6970;
-        border: 0px #ffffff solid;
-        font-size: 12px;
-        text-transform: uppercase;
-        font-weight: lighter;
-        width: 250px;
-        height: 50px;
-        border-radius: 4px;
-        opacity: 0.9;
-        margin-bottom: 10px;
-        color: #ffffff;
-        transition: background-color 0.3s;
-    }
-
-    .button_etusivu:hover {
-        background-color: #c6ad28;
-        opacity: 0.8;
-        border: 0px;
-    }
-
-    .button_etusivu a {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-    .sosmedia_sisalto {
-        width: 15%;
-        display: flex;
-        margin: 0 auto;
-        padding-top: 30px;
-        justify-content: space-between;
-    }
-
-    .sosiaalinenmedia {
-        width: 35px;
-        height: 35px;
-        display: flex;
-    }
-
-    .sosiaalinenmedia:hover {
-        opacity: 0.6;
-    }
-
-    .display_flex {
-        display: flex;
-    }
-
-    .etusivu {
-        background: url("https://raw.githubusercontent.com/saanalapinkangas/web/main/salon/photos/kampaamotausta1.jpg");
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right top;
-    }
-
-    .etusivu_txt {
-        float: left;
-        margin: 10%;
-        width: 50%;
-    }
-
-    .etusivu_img {
-        float: right;
-        margin-top: 0;
-        margin-right: 5%;
-        width: 40%;
-    }
-
-    .etusivu_img img {
-        border-radius: 0 0 30% 30%;
-        width: 70%;
-    }
-
-    .etusivu_txt p {
-        font-size: 14px;
-    }
-
-    .etusivu_txt h1 {
-        font-size: 18px;
-        color: #ffffff;
-        text-transform: uppercase;
-        font-weight: lighter;
-        text-align: center;
-        margin-bottom: 40px;
-        margin-top: -40px;
-    }
-
-    .etusivu_txt h2 {
-        color: #99a799;
-        font-size: 15px;
-        text-transform: uppercase;
-        font-weight: normal;
-        text-align: center;
-        margin-top: 90px;
-    }
-
-    .button_sisalto2 {
-        width: 100%;
-        display: flex;
-        margin: 0 auto;
-        justify-content: space-between;
-        flex-direction: row;
-        margin-top: 10%;
-    }
-
-    .button_pinkki {
-        background-color: #cfb0b7;
-        border: 0px #ffffff solid;
-        font-size: 12px;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: lighter;
-        width: 250px;
-        height: 50px;
-        border-radius: 30px;
-        color: #ffffff;
-        transition: background-color 0.3s;
-    }
-
-    .button_pinkki a {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-    .button_pinkki:hover {
-        background-color: #c6ad28;
-        opacity: 0.8;
-        border: 0px;
-    }
-
-    @media (max-width: 600px) {
-
-        .logo {
-            height: 50vh;
-        }
-
+        /* dia 1 logomäärittelyt */
         .logokuva {
-            width: 45%;
+            width: 100%;
+            filter: drop-shadow(5px 5px 5px #222222);
         }
 
-        .button_sisalto {
-            flex-direction: column;
-            align-items: center;
-            margin: 8px auto;
-        }
-
-        .sosmedia_sisalto {
-            width: 30%;
-            padding-top: 10px;
-            justify-content: space-between;
-        }
-
-        .button_sisalto2 {
-            flex-direction: column;
-            align-items: center;
-            margin: 8px auto;
-        }
-
-        .etusivu_txt {
-            width: 90%;
-            margin-top: 12%;
-        }
-
-        .etusivu_img {
-            width: 0%;
-            visibility: hidden;
-        }
+    /* sisällön kehys */
+    .sisalto {
+        width: 90%;
+        min-height: 80vh;
     }
+
+    /* navigaatio */
+    #navigaatio {
+        top: -90px;
+        height: 90px;
+        flex-wrap: wrap;
+    }
+
+    .nav_sosmedia {
+        width: auto;
+    }
+
+    .nav_sosmedia li {
+        height: 15px;
+    }
+
+    .nav_sosmedia a {
+        font-size: 13px;
+        padding: 5px 7px;
+    }
+
+    .nav_logo {
+        width: 50%;
+        padding-left: 0;
+        padding-top: 5px;
+    }
+
+    .nav_logo img {
+        height: 30px;
+    }
+
+    /* navigaation linkit */
+    .nav_linkit {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .nav_linkit a {
+        font-size: 13px;
+        margin: 0px 10px;
+        padding: 5px 10px;
+    }
+
+    /* sisällöt */
+
+    .galleria {
+        display: grid;
+    }
+
+    .sarake {
+        width: 100%;
+        margin: 0;
+    }
+
+    .footer_contact {
+        width: 100%;
+    }
+
+    .footer_sosmedia {
+        text-align: center;
+    }
+
+    .footer_lomake {
+        width: 0%;
+        visibility: hidden;
+    }
+
+}
