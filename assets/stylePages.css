@@ -139,6 +139,7 @@ body {
 
     /* typografia */
 
+    /* h1: mitä tehty */
     h1 {
         font-size: 20px;
         color: #D2BBB1;
@@ -147,12 +148,20 @@ body {
         margin-bottom: 5px;
     }
 
+    /* h2: asiakas, tekopaikka, aihe
+        esim. Yritys Oy, Koulun harj.työ, Opinnaytetyö*/
     h2 {
         font-size: 15px;
         color: #D2BBB1;
         text-transform: uppercase;
         font-weight: lighter;
         margin-bottom: 20px;
+    }
+
+    .sisalto p {
+        width: 40%;
+        font-size: 14px;
+        color: gray;
     }
 
 
