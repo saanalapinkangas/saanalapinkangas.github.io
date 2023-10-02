@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Home": "#aloitus",
         "Portfolio": "#portfolio",
         "AboutMe": "link.html",
-        "Contact": "#footer"
+        "Contact": "link.html",
     };
 
     var facebookLink = document.getElementById("fb");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var aloitusLink = document.getElementById("aloitus-link");
     var portfolioLink = document.getElementById("portfolio-link");
     var aboutMeLink = document.getElementById("aboutme");
-    var contactLink = document.getElementById("contact-link");
+    var contactLink = document.getElementById("contact");
 
     // Asetetaan linkkien osoitteet JavaScriptista
     facebookLink.href = links["Facebook"];
