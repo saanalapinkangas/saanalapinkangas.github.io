@@ -61,6 +61,7 @@ body {
 /* sisällön kehys */
 .dia2_sisalto {
     margin: auto;
+    margin-top: 50px;
     width: 80%;
     min-height: 100vh;
 }
