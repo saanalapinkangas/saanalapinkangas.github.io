@@ -1,24 +1,25 @@
 // Kielenvaihto-nappi
+
 document.addEventListener("DOMContentLoaded", function () {
 
-// Haetaan tarvittavat elementit DOM:ista
-const vanhaTekstiElementti = document.getElementById("vanhaTeksti");
-const uusiTekstiElementti = document.getElementById("uusiTeksti");
-const vaihdaNappi = document.getElementById("vaihdaNappi");
+    // Haetaan tarvittavat elementit DOM:ista
+    const tekstit = document.querySelectorAll(".vaihdettavaTxt"); // Valitse kaikki tekstit
 
-// Lisätään nappiin klikkikuuntelija
-vaihdaNappi.addEventListener("click", () => {
-    // Tarkistetaan, kumpi teksti näytetään ja kumpi piilotetaan
-    if (vanhaTekstiElementti.classList.contains("nayta")) {
-        vanhaTekstiElementti.classList.remove("nayta");
-        vanhaTekstiElementti.classList.add("piilossa");
-        uusiTekstiElementti.classList.remove("piilossa");
-        uusiTekstiElementti.classList.add("nayta");
-    } else {
-        uusiTekstiElementti.classList.remove("nayta");
-        uusiTekstiElementti.classList.add("piilossa");
-        vanhaTekstiElementti.classList.remove("piilossa");
-        vanhaTekstiElementti.classList.add("nayta");
-    }
-});
+    // Haetaan nappi DOM:ista
+    const vaihdaNappi = document.getElementById("vaihdaNappi");
+
+    // Lisätään nappiin klikkikuuntelija
+    vaihdaNappi.addEventListener("click", () => {
+
+        // Käydään läpi kaikki tekstit ja vaihdetaan niiden näkyvyyttä
+        tekstit.forEach((tekstiElementti) => {
+            if (tekstiElementti.classList.contains("nayta")) {
+                tekstiElementti.classList.remove("nayta");
+                tekstiElementti.classList.add("piilossa");
+            } else {
+                tekstiElementti.classList.remove("piilossa");
+                tekstiElementti.classList.add("nayta");
+            }
+        });
+    });
 });

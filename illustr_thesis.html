@@ -10,6 +10,7 @@
     <script src="assets/anchor.js" type="text/javascript"></script>
     <script src="assets/links2.js" type="text/javascript"></script>
     <script src="assets/stuff2.js" type="text/javascript"></script>
+    <script src="assets/modal.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -38,11 +39,9 @@
     </div>
     <div class="kehys">
         <div class="sisalto">
-            <div id="vanhaTeksti" class="nayta">
+            <div id="vanhaTeksti" class="vaihdettavaTxt nayta">
             <h1>Opas sädehoitoon tulevalle lapselle</h1>
             <h2>Ulkoasun suunnittelu, kuvitus ja taitto</h2>
-            <p>Pohjautuu Milka Lapinkankaan syksyllä 2022 tehdyn Oulun ammattikorkeakoulun radiografian ja sädehoidon
-                tutkinto-ohjelman opinnäytetyöhön.
 
             <p>Suunnittelin ja toteutin ulkoasun, kuvituksen ja taiton siskoni Milka Lapinkankaan opinnäytetyöhön Oulun
                 ammattikorkeakoulun radiografian ja sädehoiton tutkinto-ohjelmassa. Konsultoin lisäksi hahmojen
@@ -58,7 +57,7 @@
 
                 <br>Toteutustapa: Procreate-piirrosohjelma, Adobe Photoshop ja InDesign
             </p></div>
-            <div id="uusiTeksti" class="piilossa">
+            <div id="uusiTeksti" class="vaihdettavaTxt piilossa">
                 <h1>Guide for a Child Coming for Radiotherapy</h1>
                 <h2>Layout Design, Illustration, and Formatting</h2>
                 <p>Based on Milka Lapinkangas's thesis completed in the autumn of 2022 as part of the Oulu University of Applied Sciences' Radiography and Radiotherapy degree program.</p>
@@ -68,6 +67,14 @@
                 Methodology: Procreate drawing software, Adobe Photoshop, and InDesign.</p>
             </div>
             <button id="vaihdaNappi">english / finnish</button>
+            <br>
+
+            <!-- modaalin asetus -->
+            <div id="myModal" class="modal">
+                <img class="modal-content" id="modalImg">
+                <div id="caption"></div>
+            </div>
+
             <div class="galleria">
                 <img
                     src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/opinnaytetyo1.png">
