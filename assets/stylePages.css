@@ -14,6 +14,7 @@ body {
     width: 100%;
     margin: 0;
 }
+
 /*#endregion*/
 
 /*#region --- Navigaatio */
@@ -32,6 +33,7 @@ body {
     align-items: center;
     flex-direction: row;
 }
+
 /*#endregion*/
 
 /*#region --- Navigaatio, sosiaalinen media */
@@ -65,6 +67,7 @@ body {
     border-radius: 50%;
     color: #465D55;
 }
+
 /*#endregion*/
 
 /*#region --- Navigaatio, pieni logo */
@@ -78,6 +81,7 @@ body {
 .nav_logo img {
     height: 40px;
 }
+
 /*#endregion*/
 
 /*#region --- Navigaatio, menu */
@@ -132,6 +136,7 @@ body {
     opacity: 1;
     transform: translateY(0px);
 }
+
 /*#endregion*/
 
 /*#region --- Kehys ja Sisältö */
@@ -154,6 +159,7 @@ body {
     min-height: 80vh;
     align-items: center;
 }
+
 /*#endregion*/
 
 /*#region --- Typografia */
@@ -181,6 +187,7 @@ h2 {
 .sisalto p {
     width: 90%;
 }
+
 /*#endregion*/
 
 /*#region --- Kuvat */
@@ -200,7 +207,9 @@ h2 {
     max-height: 80vh;
     width: auto;
     margin: 5px;
+    cursor: pointer;
 }
+
 /*#endregion*/
 
 /*#region --- Previous & Next -buttonien kehys */
@@ -223,6 +232,7 @@ h2 {
 .nextbutton {
     float: right;
 }
+
 /*#endregion*/
 
 /*#region --- PreviousNext, edellinen-button */
@@ -263,6 +273,7 @@ h2 {
     opacity: 1;
     transform: translateX(10px) translateY(-50%);
 }
+
 /*#endregion*/
 
 /*#region --- PreviousNext, seuraava-button */
@@ -303,6 +314,7 @@ h2 {
     opacity: 1;
     transform: translateX(-10px) translateY(-50%);
 }
+
 /*#endregion*/
 
 /*#region --- Footer */
@@ -319,6 +331,7 @@ h2 {
     color: #EEEDEB;
     padding: 20px 0px 20px 0px;
 }
+
 /*#endregion*/
 
 /*#region --- Footer, sosiaalinen media */
@@ -355,6 +368,7 @@ h2 {
     background-color: #465D55;
     opacity: 0.8;
 }
+
 /*#endregion*/
 
 /*#region --- Kielenvaihto-nappi */
@@ -385,6 +399,7 @@ h2 {
 .piilossa {
     display: none;
 }
+
 /*#endregion*/
 
 /*#region --- Slideshow-osa alkaa */
@@ -464,10 +479,83 @@ h2 {
 .dot.active {
     background-color: #333;
 }
+
 /*#endregion*/
 
 /* uusi kuvaikkuna */
 
+.galleria img:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 90vw;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
 
 
 /* RESPONSIIVISUUS ************************************/
@@ -484,6 +572,7 @@ h2 {
         width: 90%;
         min-height: 80vh;
     }
+
     /*#endregion*/
 
     /*#region --- navigaatio */
@@ -528,6 +617,7 @@ h2 {
         margin: 0px 10px;
         padding: 5px 10px;
     }
+
     /*#endregion*/
 
     /*#region --- tekstit, kuvat */
@@ -539,6 +629,7 @@ h2 {
     .galleria img {
         width: 100%;
     }
+
     /*#endregion*/
 
     /*#region --- edellinen ja seuraava -buttonit */
@@ -550,6 +641,7 @@ h2 {
         float: left;
         padding-left: 5%;
     }
+
     /*#endregion*/
 
     /*#region --- footer */
@@ -561,5 +653,6 @@ h2 {
         font-size: 13px;
         padding: 5px 7px;
     }
+
     /*#endregion*/
 }

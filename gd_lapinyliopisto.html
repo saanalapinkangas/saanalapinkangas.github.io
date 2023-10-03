@@ -11,6 +11,7 @@
     <script src="assets/links2.js" type="text/javascript"></script>
     <script src="assets/stuff2.js" type="text/javascript"></script>
     <script src="assets/slideshow.js" type="text/javascript"></script>
+    <script src="assets/modal.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -84,49 +85,68 @@
             <button id="vaihdaNappi">english / finnish</button>
             <br>
 
-            <!-- Slideshow -->
+            <!-- Slideshow alkaa -->
 
-                <div class="slideshow-container">
-                    <div class="slide fade">
-                        <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti0.jpeg">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti2.jpeg">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti3.jpeg">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti4.jpeg">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti9.jpeg">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti6.jpeg">
-                    </div>
-                    <div class="slide fade">
-                        <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti7.jpeg">
-                    </div>
-            
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img
+                        src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti0.jpeg">
                 </div>
-                
-                <div class="dots-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                    <span class="dot" onclick="currentSlide(7)"></span>
+                <div class="slide fade">
+                    <img
+                        src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti2.jpeg">
                 </div>
+                <div class="slide fade">
+                    <img
+                        src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti3.jpeg">
+                </div>
+                <div class="slide fade">
+                    <img
+                        src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti4.jpeg">
+                </div>
+                <div class="slide fade">
+                    <img
+                        src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti9.jpeg">
+                </div>
+                <div class="slide fade">
+                    <img
+                        src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti6.jpeg">
+                </div>
+                <div class="slide fade">
+                    <img
+                        src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/graaf-lehti7.jpeg">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div>
+
+            <!-- slideshow päättyy -->
+
+<!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="modalImg">
+
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+            </div>
 
             <div class="galleria">
                 <img
-                    src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/opinnaytetyo1.png">
-                <img
+                    src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/opinnaytetyo1.png" alt="esittelytxt">
+                    <img
                     src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/opinnaytetyo2.png">
                 <img
                     src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/opinnaytetyo3.png">
