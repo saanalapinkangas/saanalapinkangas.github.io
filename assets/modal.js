@@ -7,6 +7,7 @@ var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("modalImg");
 var captionText = document.getElementById("caption");
 var galleryImages = document.querySelectorAll(".galleria img");
+var slideshowGallery = document.querySelectorAll(".slide img");
 
 // Funktio, joka avaa modalin ja asettaa kuvan ja tekstin
 function openModal(imgElement) {
@@ -17,6 +18,13 @@ function openModal(imgElement) {
 
 // Klikkauksen kuuntelija kuvan avaamiseksi galleriasta
 galleryImages.forEach(function (imgElement) {
+    imgElement.onclick = function () {
+        openModal(imgElement);
+    }
+});
+
+// Slideshow-gallerian kuvan avaaminen
+slideshowGallery.forEach(function (imgElement) {
     imgElement.onclick = function () {
         openModal(imgElement);
     }

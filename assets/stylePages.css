@@ -402,12 +402,12 @@ h2 {
 
 /*#endregion*/
 
-/*#region --- Slideshow-osa alkaa */
+/*#region --- Slideshow */
 .slideshow-container {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    top: 10px;
+    top: 20px;
 }
 
 .slide {
@@ -428,6 +428,7 @@ h2 {
 .slide img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 .prev,
@@ -482,14 +483,7 @@ h2 {
 
 /*#endregion*/
 
-/* uusi kuvaikkuna */
-
-.galleria img:hover {
-    opacity: 0.8;
-    transition: 0.5s;
-}
-
-/* The Modal (background) */
+/*#region --- Modaalit */
 .modal {
     display: none;
     /* Hidden by default */
@@ -511,6 +505,7 @@ h2 {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.9);
     /* Black w/ opacity */
+    cursor: pointer;
 }
 
 /* Modal Content (Image) */
@@ -556,6 +551,7 @@ h2 {
         width: 100%;
     }
 }
+/*#endregion*/
 
 
 /* RESPONSIIVISUUS ************************************/
