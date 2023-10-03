@@ -1,6 +1,6 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-
+/*#region --- Body */
 body {
     background-color: #EEEDEB;
     font-size: 14px;
@@ -14,8 +14,9 @@ body {
     width: 100%;
     margin: 0;
 }
+/*#endregion*/
 
-/* navigaatio */
+/*#region --- Navigaatio */
 .navigaatio_pages {
     background-color: #465D55;
     position: fixed;
@@ -31,8 +32,9 @@ body {
     align-items: center;
     flex-direction: row;
 }
+/*#endregion*/
 
-/* navigaatio, sosiaalinen media */
+/*#region --- Navigaatio, sosiaalinen media */
 .nav_sosmedia {
     float: left;
     width: 30%;
@@ -63,8 +65,9 @@ body {
     border-radius: 50%;
     color: #465D55;
 }
+/*#endregion*/
 
-/* navigaatio, pieni logo */
+/*#region --- Navigaatio, pieni logo */
 .nav_logo {
     float: left;
     width: 30%;
@@ -75,8 +78,9 @@ body {
 .nav_logo img {
     height: 40px;
 }
+/*#endregion*/
 
-/* navigaatio, menu */
+/*#region --- Navigaatio, menu */
 .nav_linkit {
     float: right;
     width: 40%;
@@ -128,7 +132,9 @@ body {
     opacity: 1;
     transform: translateY(0px);
 }
+/*#endregion*/
 
+/*#region --- Kehys ja Sisältö */
 .kehys {
     margin-top: 130px;
     width: 80%;
@@ -148,9 +154,9 @@ body {
     min-height: 80vh;
     align-items: center;
 }
+/*#endregion*/
 
-
-/* typografia */
+/*#region --- Typografia */
 
 /* h1: mitä tehty */
 h1 {
@@ -175,9 +181,9 @@ h2 {
 .sisalto p {
     width: 90%;
 }
+/*#endregion*/
 
-
-/* kuvat */
+/*#region --- Kuvat */
 
 .galleria {
     width: 100%;
@@ -195,9 +201,9 @@ h2 {
     width: auto;
     margin: 5px;
 }
+/*#endregion*/
 
-
-/* edellinen ja seuraava -buttonit */
+/*#region --- Previous & Next -buttonien kehys */
 
 .previousnextbutton {
     width: 100%;
@@ -217,8 +223,9 @@ h2 {
 .nextbutton {
     float: right;
 }
+/*#endregion*/
 
-/* edellinen-button */
+/*#region --- PreviousNext, edellinen-button */
 #custom-button-left {
     width: 150px;
     position: relative;
@@ -256,8 +263,9 @@ h2 {
     opacity: 1;
     transform: translateX(10px) translateY(-50%);
 }
+/*#endregion*/
 
-/* seuraava-button */
+/*#region --- PreviousNext, seuraava-button */
 #custom-button-right {
     width: 150px;
     position: relative;
@@ -295,10 +303,9 @@ h2 {
     opacity: 1;
     transform: translateX(-10px) translateY(-50%);
 }
+/*#endregion*/
 
-
-/* footer */
-
+/*#region --- Footer */
 .footer {
     font-family: 'Poppins', Arial;
     width: 100%;
@@ -312,8 +319,9 @@ h2 {
     color: #EEEDEB;
     padding: 20px 0px 20px 0px;
 }
+/*#endregion*/
 
-/* footer, sosiaalinen media */
+/*#region --- Footer, sosiaalinen media */
 .footer_sosmedia {
     float: left;
     width: 100%;
@@ -347,10 +355,9 @@ h2 {
     background-color: #465D55;
     opacity: 0.8;
 }
+/*#endregion*/
 
-
-/* kielenvaihto-nappi */
-
+/*#region --- Kielenvaihto-nappi */
 #vaihdaNappi {
     float: right;
     border-radius: 25px;
@@ -378,8 +385,9 @@ h2 {
 .piilossa {
     display: none;
 }
+/*#endregion*/
 
-/* slideshow **********/
+/*#region --- Slideshow-osa alkaa */
 .slideshow-container {
     position: relative;
     max-width: 800px;
@@ -456,11 +464,17 @@ h2 {
 .dot.active {
     background-color: #333;
 }
+/*#endregion*/
+
+/* uusi kuvaikkuna */
+
+
 
 /* RESPONSIIVISUUS ************************************/
 
 @media (max-width: 520px) {
 
+    /*#region --- kehys, sisältö */
     .kehys {
         width: 90%;
     }
@@ -470,8 +484,9 @@ h2 {
         width: 90%;
         min-height: 80vh;
     }
+    /*#endregion*/
 
-    /* navigaatio */
+    /*#region --- navigaatio */
     .navigaatio_pages {
         height: 90px;
         flex-wrap: wrap;
@@ -513,8 +528,9 @@ h2 {
         margin: 0px 10px;
         padding: 5px 10px;
     }
+    /*#endregion*/
 
-    /* esittelyteksti */
+    /*#region --- tekstit, kuvat */
     .sisalto p {
         width: 80%;
     }
@@ -523,8 +539,9 @@ h2 {
     .galleria img {
         width: 100%;
     }
+    /*#endregion*/
 
-    /* edellinen ja seuraava -buttonit */
+    /*#region --- edellinen ja seuraava -buttonit */
     .previousnextbutton {
         width: 95%;
     }
@@ -533,7 +550,9 @@ h2 {
         float: left;
         padding-left: 5%;
     }
+    /*#endregion*/
 
+    /*#region --- footer */
     .footer {
         padding-bottom: 10px;
     }
@@ -542,4 +561,5 @@ h2 {
         font-size: 13px;
         padding: 5px 7px;
     }
+    /*#endregion*/
 }
