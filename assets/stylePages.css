@@ -198,6 +198,16 @@ h3 {
     width: 90%;
 }
 
+.sisalto a {
+    color: #D2BBB1;
+    text-decoration: none;
+}
+
+.sisalto a:hover{
+    color: #D2BBB1;
+    text-decoration: underline;
+}
+
 /*#endregion*/
 
 /*#region --- Kuvat */
@@ -522,8 +532,8 @@ h3 {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 90vw;
+    width: auto;
+    max-height: 100vh;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
