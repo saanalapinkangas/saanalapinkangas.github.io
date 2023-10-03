@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "LinkedIn": "linkki14.html",
         "Home": "#aloitus",
         "Portfolio": "#portfolio",
-        "AboutMe": "link.html",
+        "AboutMe": "aboutme.html",
         "Contact": "link.html",
     };
 

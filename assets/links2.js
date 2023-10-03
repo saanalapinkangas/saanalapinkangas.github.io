@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "Instagram": "linkki12.html",
         "GitHub": "linkki3.html",
         "LinkedIn": "linkki14.html",
-        "Home": "link.html",
-        "Portfolio": "link.html",
-        "AboutMe": "link.html",
+        "Home": "index.html",
+        "Portfolio": "index.html",
+        "AboutMe": "aboutme.html",
         "Contact": "link.html"
     };
 
