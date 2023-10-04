@@ -180,6 +180,12 @@ body {
     background-color: #AEB2A5;
     color: white;
 }
+
+.nappilevea {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 /*#endregion*/
 
 /*#region --- About me */
@@ -282,16 +288,23 @@ h4 {
     width: 90%;
 }
 
-.sisalto, .sisalto_aboutme a {
+.sisalto a {
     color: #D2BBB1;
     text-decoration: none;
 }
 
 .sisalto_aboutme a {
+    color: #D2BBB1;
+    text-decoration: none;
     font-size: 10px;
 }
 
-.sisalto, .sisalto_aboutme a:hover{
+.sisalto a:hover{
+    color: #D2BBB1;
+    text-decoration: underline;
+}
+
+.sisalto_aboutme a:hover{
     color: #D2BBB1;
     text-decoration: underline;
 }
@@ -316,6 +329,35 @@ h4 {
     width: auto;
     margin: 5px;
     cursor: pointer;
+}
+
+.galleria2 {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.galleria2 img {
+    border-radius: 4px;
+    max-height: 80vh;
+    width: auto;
+    margin: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.galleria2 img:hover {
+    opacity: 0.8;
+}
+
+.galleria p {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /*#endregion*/
