@@ -1,7 +1,19 @@
-- linkit
-- skrollautuvuus ja navin asettelu
+tarkista kaikkien sivujen responsiivisuus kännykällä:
+- asettuuko videot ok
+- tekstien asettuminen (gd)
+- gallerian esikatselutekstien toimimattomuus kännykällä...
+    > pitäisikö asetella jotenkin muutoin? esim. kuvan alle?
 
-- erillinen about me?
-- erillinen contact vai yhdistää footeriin?
+footer:
+- indexin footer loppuun, sisältö? yhteydenottolomake?
+- linkkien toimivuus, onko linkit jo "käytetty" yläpalkissa
 
-- footer: yhteydenottolomake
+portfolio:
+- lisää portfolio-sivu portfoliogalleriaan
+
+contact:
+- sisältö
+- yhteydenottolomake?
+
+javascript:
+- tarkista js sisällöt, täyttääkö kaikki kriteerit
