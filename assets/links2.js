@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     var links = {
-        "Facebook": "link.html",
-        "Instagram": "linkki12.html",
-        "GitHub": "linkki3.html",
-        "LinkedIn": "linkki14.html",
+        "Facebook": "https://www.facebook.com/saana.lapinkangas",
+        "Instagram": "https://www.instagram.com/saanalapinkangas",
+        "GitHub": "https://github.com/saanalapinkangas",
+        "LinkedIn": "https://www.linkedin.com/in/saanalapinkangas",
         "Home": "index.html",
         "Portfolio": "index.html",
         "AboutMe": "aboutme.html",
-        "Contact": "link.html"
+        "Contact": "contact.html"
     };
 
     var facebookLink = document.getElementById("fb");
