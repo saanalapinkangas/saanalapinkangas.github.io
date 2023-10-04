@@ -163,28 +163,40 @@ body {
 
 /*#region --- About me */
 
-.sisalto_aboutme {
-    float: left;
-    margin: auto;
+.kehys_aboutme {
+    margin-top: 60px;
     width: 80%;
-    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sisalto_aboutme {
+    display: flex;
     flex-direction: row;
+    width: 80%;
 }
 
 /* about me */
 .aboutme_txt {
+    margin-top: 80px;
     float: left;
-    width: 50%;
-    margin-left: 10%;
+    width: 100%;
 }
 
 .aboutme_kuva {
     float: left;
     width: 40%;
-    margin-left: 10%;
-    margin-bottom: 0;
-    position: absolute;
+    margin-top: 0;
+    margin-left: 40px;
+}
+
+.aboutme_kuva img {
+    width: 100%;
+    border-radius: 0 0 50% 50%;
 }
 
 /*#endregion*/
