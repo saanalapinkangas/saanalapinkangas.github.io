@@ -330,7 +330,7 @@ body {
 
 /* RESPONSIIVISUUS ************************************/
 
-@media (max-width: 520px) {
+@media only screen and (max-width: 520px) {
 
     /*#region --- dia 1 & 2 sisällöt */
     /* dia 1 logomäärittelyt */
