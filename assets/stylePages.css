@@ -159,6 +159,33 @@ body {
     min-height: 80vh;
     align-items: center;
 }
+/*#endregion*/
+
+/*#region --- About me */
+
+.sisalto_aboutme {
+    float: left;
+    margin: auto;
+    width: 80%;
+    min-height: 80vh;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* about me */
+.aboutme_txt {
+    float: left;
+    width: 50%;
+    margin-left: 10%;
+}
+
+.aboutme_kuva {
+    float: left;
+    width: 40%;
+    margin-left: 10%;
+    margin-bottom: 0;
+    position: absolute;
+}
 
 /*#endregion*/
 
