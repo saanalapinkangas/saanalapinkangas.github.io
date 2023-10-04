@@ -222,6 +222,19 @@ body {
     margin-bottom: 30px;
 }
 
+.aboutme_puolikkaat {
+    width: 50%;
+    float: left;
+    text-align: center;
+    background-color: #AEB2A5;
+    border-radius: 30px;
+    font-size: 12px;
+    padding-left: 15x;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+
 /*#endregion*/
 
 /*#region --- Typografia */
@@ -256,16 +269,29 @@ h3 {
     margin-top: 40px;
 }
 
+h4 {
+    font-size: 12px;
+    color: #465D55;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
 .sisalto p {
     width: 90%;
 }
 
-.sisalto a {
+.sisalto, .sisalto_aboutme a {
     color: #D2BBB1;
     text-decoration: none;
 }
 
-.sisalto a:hover{
+.sisalto_aboutme a {
+    font-size: 10px;
+}
+
+.sisalto, .sisalto_aboutme a:hover{
     color: #D2BBB1;
     text-decoration: underline;
 }
