@@ -37,86 +37,39 @@
             </div>
         </div>
     </div>
-    <div class="kehys_aboutme">
-        <div class="sisalto_aboutme">
-            <div class="aboutme_txt">
-                <button id="vaihdaNappi">english / finnish</button>
-                <div id="vanhaTeksti" class="vaihdettavaTxt nayta">
+    <div class="kehys">
+        <div class="sisalto_contact">
                     <h1>contact</h1>
                     <h2>Saana Lapinkangas</h2>
-                    <p>coming soon</p><br>
-
-                </div>
-                <div id="uusiTeksti" class="vaihdettavaTxt piilossa">
-                    <h1>contact</h1>
-                    <h2>saana lapinkangas</h2>
-                    <p>tulossa
-                    </p>
-
+                    
+                    <p>Saana Lapinkangas</p>
+                    <p>saana.lapinkangas@gmail.com</p>
+                    <p>ph. 040 566 8961</p>
+                    <p>Oulu, Finland</p>
                     <br>
-                </div>
+
+                    <!-- lomake -->
+                    <form action="process_form.php" method="post">
+                        <label for="name">Nimi:</label>
+                        <input type="text" id="name" name="name" required><br>
+                
+                        <label for="phone">Puhelin:</label>
+                        <input type="text" id="phone" name="phone"><br>
+                
+                        <label for="email">Sähköposti:</label>
+                        <input type="email" id="email" name="email" required><br>
+                
+                        <label for="message">Viesti:</label>
+                        <textarea id="message" name="message" required></textarea><br>
+                
+                        <input type="submit" value="Lähetä">
+                    </form>
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    
+
+                
             </div>
-            <div class="aboutme_kuva">
-                <img
-                    src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/aboutme_2.jpg">
-
-                <p><a href="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/SaanaLapinkangas_cv_2023.pdf"
-                        download="Download CV"><button class="nappi">download cv</button></a></p>
-                <p><a
-                        href="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/SaanaLapinkangas-CV-2023_jpg.jpg">If
-                        download fails, you may open CV from here</a></p>
-                <br>
-                <h4>online:</h4>
-                <p><a href="https://www.linkedin.com/in/saanalapinkangas/"><button class="nappi">linkedin</button></a>
-                </p>
-                <p><a href="https://github.com/saanalapinkangas"><button class="nappi">github</button></a></p>
-                <p><a href="https://www.instagram.com/saanalapinkangas/"><button class="nappi">instagram</button></a>
-                </p>
-            </div>
-
-        </div>
-        <div class="sisalto_aboutme">
-            <div class="aboutme_puolikkaat">
-                <div id="vanhaTeksti" class="vaihdettavaTxt nayta">
-                    <h4>contact</h4>
-                    <p><b>Assembler, Sanmina, Summer 2023</b><br>
-                        Electronics assembler</p>
-                    <p><b>Entrepreneur, Lapinkettu Ltd, 2016 - 2022</b><br>
-                        Art products, customer projects, online store, product design, branding</p>
-                </div>
-                <div id="uusiTeksti" class="vaihdettavaTxt piilossa">
-                    <h4>Työkokemus:</h4>
-                    <p><b>Kokooja, Sanmina kesä 2023</b><br>
-                        Elektroniikan kokooja</p>
-
-                    <p><b>Yrittäjä, Lapinkettu Oy 2022 - 2016</b><br>
-                        Taidetuotteet, asiakastyöt, verkkokauppa,<br> tuotesuunnittelu, brändäys</p>
-                </div>
-            </div>
-            <div class="aboutme_puolikkaat">
-                <div id="vanhaTeksti" class="vaihdettavaTxt nayta">
-                    <h4>Education:</h4>
-                    <p><b>Oulu University of Applied Sciences</b><br>
-                        Bachelor of Engineering, Information Technology (programming)
-                        <br>Autumn 2022 - Present
-                    </p>
-                    <p><b>University of Lapland, Faculty of Arts</b><br>
-                        Graphic Design
-                        <br>Autumn 2019 - December 2020
-                    </p>
-                </div>
-                <div id="uusiTeksti" class="vaihdettavaTxt piilossa">
-                    <h4>koulutus:</h4>
-                    <p><b>Oulun Ammattikorkeakoulu</b><br>
-                        Tieto- ja viestintätekniikan insinööri, ohjelmointi
-                        <br>syksy 2022 - nykyhetki
-                    </p>
-
-                    <p><b>Lapin yliopisto, Taiteiden tiedekunta</b><br>
-                        Graafinen suunnittelu<br>
-                        syksy 2019 - joulu 2020</p>
-                </div>
-            </div><br>
+            
         </div>
 
 
@@ -126,10 +79,10 @@
     <div class="footer">
         <div class="footer_sosmedia">
             <ul>
-                <li><a href="" id="fb"><i class="fa fa-facebook "></i></a></li>
-                <li><a href="" id="insta"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="" id="github"><i class="fa fa-github"></i></a></li>
-                <li><a href="" id="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="" id="fb-footer"><i class="fa fa-facebook "></i></a></li>
+                <li><a href="" id="insta-footer"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="" id="github-footer"><i class="fa fa-github"></i></a></li>
+                <li><a href="" id="linkedin-footer"><i class="fa fa-linkedin"></i></a></li>
             </ul>
         </div>
         <p>Copyright © 2023 Saana Lapinkangas</p>

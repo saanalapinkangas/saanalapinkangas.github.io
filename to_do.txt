@@ -14,6 +14,5 @@ portfolio:
 contact:
 - sisältö
 - yhteydenottolomake?
-
 javascript:
 - tarkista js sisällöt, täyttääkö kaikki kriteerit

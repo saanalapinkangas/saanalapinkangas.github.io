@@ -251,51 +251,31 @@ body {
 
 /*#endregion*/
 
-/*#region --- DIA 3, footer */
+/*#region --- Footer */
 .footer {
-    background-color: #465D55;
-    max-height: 80vh;
-    margin: 0;
-    color: #EEEDEB;
-}
-
-.footer_sisalto {
-    margin: 10%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer_contact {
-    float: left;
-    width: 50%;
-    margin-top: 15%;
-    font-size: 15px;
-}
-
-.footer_lomake {
-    float: right;
-    width: 50%;
-}
-
-.footer_copyright {
-    width: 100%;
     font-family: 'Poppins', Arial;
-    color: gray;
+    width: 100%;
     font-size: 9px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1.8;
-    padding-bottom: 20px;
+    background-color: #465D55;
+    max-height: 40vh;
+    margin: 0;
+    margin-top: 60px;
+    color: #EEEDEB;
+    padding: 20px 0px 20px 0px;
 }
 
-/* footer, sosiaalinen media */
+/*#endregion*/
+
+/*#region --- Footer, sosiaalinen media */
 .footer_sosmedia {
     float: left;
     width: 100%;
     display: block;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .footer_sosmedia ul {
@@ -313,7 +293,7 @@ body {
     padding: 10px 14px;
     text-align: center;
     transition: .5s;
-    background-color: #ECCEC3;
+    background-color: #AEB2A5;
     border-radius: 50%;
     color: #465D55;
 }
