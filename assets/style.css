@@ -1,4 +1,7 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url("fontawesome/css/fontawesome.css");
+@import url("fontawesome/css/brands.css");
+@import url("fontawesome/css/solid.css");
+
 
 /*#region --- Body */
 body {
