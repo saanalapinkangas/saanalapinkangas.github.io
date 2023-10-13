@@ -172,8 +172,13 @@ body {
     text-align: center;
 }
 
+.row {
+    width: 100%;
+    flex-direction: row;
+}
+
 .contact_puolikkaat {
-    width: 50%;
+    width: 30%;
     float: left;
     text-align: center;
 }
