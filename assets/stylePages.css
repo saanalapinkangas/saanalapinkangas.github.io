@@ -585,6 +585,11 @@ h4 {
     top: 20px;
 }
 
+.slideshow-container a {
+    color: white;
+    text-decoration: none;
+}
+
 .slide {
     display: none;
     animation: fade 0.4s ease-in-out;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitHub Pages Fetch Example</title>
+</head>
+
+<body>
+    <div id="demo">Tiedoston sisältö tulee näkyä tässä.</div>
+
+    <script>
+        async function getText(file) {
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    const text = await response.text();
+                    document.getElementById("demo").innerHTML = text;
+                } else {
+                    console.error("Fetch failed with status:", response.status);
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+            }
+        }
+
+        // Kutsu getText-funktiota tiedoston hakemiseksi
+        getText("deletelater.txt");
+    </script>
+</body>
+
+</html>
