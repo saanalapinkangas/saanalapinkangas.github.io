@@ -41,7 +41,9 @@
                     <h1>fetch tekstitiedostosta</h1>
                     <h2>...</h2>
                     <br>
-                    <p id="demo">Vaihtuva teksti</p>
+                    <p id="demo">Tämän tekstin tilalle tulee tiedoston sisältö</p>
+                
+                    <p id="demo2">Tämän sisällön tiedostoa ei ole olemassa</p>
                 
             </div>
             
@@ -72,14 +74,35 @@
                     document.getElementById("demo").innerHTML = text;
                 } else {
                     console.error("Fetch failed with status:", response.status);
+                    document.getElementById("demo").innerHTML = "Tiedostoa ei löytynyt";
                 }
             } catch (error) {
                 console.error("Fetch error:", error);
+                document.getElementById("demo").innerHTML = "Virhe tiedoston hakemisessa: " + error.message;
+            }
+        }
+
+        async function getText2(file) {
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    const text = await response.text();
+                    document.getElementById("demo2").innerHTML = text;
+                } else {
+                    console.error("Fetch failed with status:", response.status);
+                    document.getElementById("demo2").innerHTML = "Tiedostoa ei löytynyt";
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+                document.getElementById("demo2").innerHTML = "Virhe tiedoston hakemisessa: " + error.message;
             }
         }
 
         // Kutsu getText-funktiota tiedoston hakemiseksi
         getText("deletelater.txt");
+
+        // Kutsu getText-funktiota tiedoston hakemiseksi
+        getText2("deletelater2.txt");
     </script>
 </body>
 
