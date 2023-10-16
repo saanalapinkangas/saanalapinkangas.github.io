@@ -177,8 +177,20 @@ body {
     flex-direction: row;
 }
 
-.contact_puolikkaat {
+.column {
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+}
+
+.contact_puolikkaat-pieni {
     width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.contact_puolikkaat-levea {
+    width: 40%;
     float: left;
     text-align: center;
 }
@@ -887,30 +899,57 @@ input[type=submit]:hover {
 
     /*#endregion*/
 
-/*#region --- about me */
+    /*#region --- contact */
+    
+    .row {
+        width: 100%;
+    }
+    
+    .contact_puolikkaat-pieni {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .contact_puolikkaat-levea {
+        width: 100%;
+    }
 
-.sisalto_aboutme {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-.aboutme_kuva {
-    width: 80%;
-    border-radius: 50%;
-}
+    form {
+        width: 100%;
+    }
 
-#suuriKuva {
-    display: none;
-}
-#pieniKuva {
-    display: block;
-}
-.nappi {
-    width: 100%;
-}
-.aboutme_puolikkaat {
-    width: 100%;
-/*#endregion*/
+    /*#endregion */
+
+    /*#region --- about me */
+
+    .sisalto_aboutme {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .aboutme_kuva {
+        width: 80%;
+        border-radius: 50%;
+    }
+
+    #suuriKuva {
+        display: none;
+    }
+
+    #pieniKuva {
+        display: block;
+    }
+
+    .nappi {
+        width: 100%;
+    }
+
+    .aboutme_puolikkaat {
+        width: 100%;
+    }
+
+    /*#endregion*/
 
     /*#region --- footer */
     .footer {
