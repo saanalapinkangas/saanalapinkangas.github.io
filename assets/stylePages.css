@@ -335,7 +335,7 @@ h4 {
 
 /*#endregion*/
 
-/*#region --- Kuvat */
+/*#region --- Kuvat ja video */
 
 .galleria {
     width: 100%;
@@ -382,6 +382,11 @@ h4 {
 .galleria p {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.video-container {
+    width: 700px;
+    height: 400px;
 }
 
 /*#endregion*/
@@ -795,7 +800,7 @@ input[type=submit]:hover {
 
     /* sisällön kehys */
     .sisalto {
-        width: 90%;
+        width: 100%;
         min-height: 80vh;
     }
 
@@ -804,11 +809,13 @@ input[type=submit]:hover {
     /*#region --- navigaatio */
     .navigaatio_pages {
         height: 90px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav_sosmedia {
-        width: 30%;
+        height: 0;
         visibility: hidden;
     }
 
@@ -822,10 +829,10 @@ input[type=submit]:hover {
     }
 
     .nav_logo {
-        width: 50%;
-        padding-left: 0%;
-        padding-right: 10%;
+        width: 100%;
         padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
     }
 
     .nav_logo img {
@@ -834,6 +841,7 @@ input[type=submit]:hover {
 
     /* navigaation linkit */
     .nav_linkit {
+        flex-direction: row;
         width: 100%;
         padding-bottom: 5px;
     }
@@ -846,7 +854,7 @@ input[type=submit]:hover {
 
     /*#endregion*/
 
-    /*#region --- tekstit, kuvat */
+    /*#region --- tekstit, kuvat, video */
     .sisalto p {
         width: 80%;
     }
@@ -858,6 +866,11 @@ input[type=submit]:hover {
 
     .modal-content {
         width: 100%;
+    }
+
+    .video-container {
+        width: 400px;
+        height: 200px;
     }
 
     /*#endregion*/
