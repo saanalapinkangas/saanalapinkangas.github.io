@@ -207,6 +207,12 @@ body {
     margin: 10px;
 }
 
+.sarake2 {
+    float: left;
+    width: 45%;
+    padding: 10px;
+}
+
 .img_zoom {
     overflow: hidden;
     text-align: center;
@@ -218,11 +224,10 @@ body {
 .img_zoom img {
     width: 100%;
     transition: transform .5s ease;
-    border-radius: 5px;
 }
 
 .img_zoom:hover img {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 
 .kuvainfo {
