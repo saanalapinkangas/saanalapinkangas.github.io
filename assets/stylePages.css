@@ -895,20 +895,21 @@ input[type=submit]:hover {
     width: 100%;
 }
 .aboutme_kuva {
-    float: left;
     width: 80%;
-    margin-top: 0;
-    margin-left: 40px;
-    text-align: center;
+    border-radius: 50%;
 }
 
-.aboutme_kuva img {
-    width: auto;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 30px;
-    overflow: hidden;
+#suuriKuva {
+    display: none;
 }
+#pieniKuva {
+    display: block;
+}
+.nappi {
+    width: 100%;
+}
+.aboutme_puolikkaat {
+    width: 100%;
 /*#endregion*/
 
     /*#region --- footer */
