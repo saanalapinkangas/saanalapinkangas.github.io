@@ -69,6 +69,16 @@ body {
     min-height: 100vh;
 }
 
+.dia2_sisalto a {
+    color: #D2BBB1;
+    text-decoration: none;
+}
+
+.dia2_sisalto a:hover {
+    color: #D2BBB1;
+    text-decoration: underline;
+}
+
 /*#endregion*/
 
 /*#region --- Navigaatio ja sen määrittelyt*/
@@ -216,30 +226,32 @@ body {
 .img_zoom {
     overflow: hidden;
     text-align: center;
-    margin: 10px;
-    border-radius: 5px;
     position: relative;
 }
 
 .img_zoom img {
     width: 100%;
-    transition: transform .5s ease;
+    transition: margin-bottom 0.5s ease;
 }
 
 .img_zoom:hover img {
-    transform: scale(1.04);
+    opacity: 0.8;
+    margin-bottom: 60px;
 }
 
 .kuvainfo {
     position: absolute;
-    bottom: 30%;
-    left: 10%;
-    width: 80%;
-    background-color: #D2BBB1;
-    opacity: 0.8;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
     padding: 8px;
     display: none;
-    border-radius: 15px;
+    border-radius: 0px;
+    transition: opacity 0.5s ease;
+}
+
+.img_zoom:hover .kuvainfo {
+    opacity: 1;
 }
 
 .kuvainfo h1 {
