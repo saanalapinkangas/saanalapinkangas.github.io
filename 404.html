@@ -10,25 +10,7 @@
     <link rel="stylesheet" href="assets/stylePages.css" media="screen" type="text/css">
     <script src="assets/anchor.js" type="text/javascript"></script>
     <script src="assets/links2.js" type="text/javascript"></script>
-    <script src="assets/form.js" type="text/javascript"></script>
-
-    <script>
-        // Tämä koodi lataa sivun, kun 404-virhetila havaitaan
-        fetch('404.html')
-          .then(response => {
-            if (response.status === 200) {
-              // Sivu ladattiin onnistuneesti, siirry siihen
-              window.location = '404.html';
-            } else {
-              // Jos lataaminen epäonnistui, voit näyttää virhesanoman
-              console.error('Sivun lataus epäonnistui:', response.status);
-            }
-          })
-          .catch(error => {
-            console.error('Virhe tapahtui:', error);
-          });
-      </script>
-      
+    <script src="assets/form.js" type="text/javascript"></script> 
 
 </head>
 
