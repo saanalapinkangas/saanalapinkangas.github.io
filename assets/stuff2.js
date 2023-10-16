@@ -23,3 +23,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// About me kuvan vaihto
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const suuriKuva = document.getElementById('suuriKuva');
+    const pieniKuva = document.getElementById('pieniKuva');
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)'); /* Vastaava media query kuin CSS:ssä */
+
+    function vaihdaKuva(event) {
+        if (event.matches) {
+            suuriKuva.style.display = 'none';
+            pieniKuva.style.display = 'block';
+        } else {
+            suuriKuva.style.display = 'block';
+            pieniKuva.style.display = 'none';
+        }
+    }
+
+    // Kutsutaan vaihdaKuva-funktiota alussa ja lisätään kuuntelija, joka reagoi muutoksiin näytössä.
+    vaihdaKuva(mediaQuery);
+    mediaQuery.addEventListener('change', vaihdaKuva);
+});
