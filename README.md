@@ -7,17 +7,16 @@
   
 <h2 align=center>PORTFOLIO</h2>
 
-Kurssi: WEB-sovellusten perusteet (5 OP)
+:small_orange_diamond: Kurssi: WEB-sovellusten perusteet (5 OP)
 
-Tehtävänanto: Luo web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.
+:small_orange_diamond: Tehtävänanto: Luo web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.
 
-### Selvitys työstä:
-Valitsin tehtäväksi oman portfolioni
+:small_orange_diamond: Selvitys työstä: Valitsin tehtäväksi oman portfolioni
 
-Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
+:arrow_down: Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
 
 
-## HTML
+##	:large_orange_diamond: HTML
 - Sivusto täyttää kaikki 5 kohtaa:
   - perus html-rakenne
   - selkeästi erotellut osiot ja sisällöt
@@ -28,7 +27,7 @@ Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
 - [About me -sivun HTML](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/aboutme.html)
 - [Portfolion mallisivu](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/brand_lapinkettu.html)
 
-## CSS
+## 	:large_orange_diamond: CSS
 - Sivusto täyttää kaikki 5 CSS-osiota:
   - perus css-tyylittely (värit, fontit)
   - luokkien ja id:n käyttö
@@ -38,7 +37,7 @@ Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
 - [Etusivun CSS](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/assets/style.css)
 - [Muiden sivujen CSS](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/assets/stylePages.css)
 
-## Osa 3: JavaScript
+## 	:large_orange_diamond: Osa 3: JavaScript
 ### 1/5 Simple interactions
 - Tapahtumankäsittelijä, joka reagoi klikkaukseen avaamalla kuvat uudessa ikkunassa (modaali). Jokainen portfolion esittelykuva avautuu näin. [modal.js](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/42fd03c13a83a9d8f563c4d80f2d7156104e624b/assets/modal.js)
 - Etusivun linkit ovat sivun sisäisiä ankkurilinkkejä, jotka siirtyvät pehmeästi haluttuun kohtaan sivulla (esim. portfoliosta siirtyminen etusivun kuvaan). [navigaatio](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/42fd03c13a83a9d8f563c4d80f2d7156104e624b/assets/stuff.js)
@@ -61,7 +60,7 @@ Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
 - Modaalissa käytetään muuttujia (esim. modal, modalImg, captionText), jotka toimivat olioina. Niiden avulla hallitaan modaalin toiminnallisuutta, kuten näkyvyyden asettamista ja kuvien näyttämistä sekä sulkemista.[modal.js](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/42fd03c13a83a9d8f563c4d80f2d7156104e624b/assets/modal.js)
 - Navigaation ja sosiaalisen median linkit on määritelty links-objektille. Niitä hallitaan olioperiaatteen mukaisesti käyttämällä document.getElementById-metodia jokaisen linkin hakemiseen ja muuttujat (facebookLink, instagramLink) toimivat linkkien objekteina. Linkkien url-osoitteet päivitetään objektien perusteella. [links.js](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/42fd03c13a83a9d8f563c4d80f2d7156104e624b/assets/links.js)
 
-## Osa 4 Asynchronous Operations
+## 	:large_orange_diamond: Osa 4 Asynchronous Operations
 ### 1/5 Use of timers
 - Etusivun pomppivassa nuolessa on ajastus, joka luo animaatiolle liikkeentunnun. Koodi `setInterval(animateArrow, 1000/60);` [stuff.js](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/42fd03c13a83a9d8f563c4d80f2d7156104e624b/assets/stuff.js)
 
