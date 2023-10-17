@@ -2,7 +2,7 @@
   <picture><img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png" width="100%"></picture>
 </p>
 
-<p align=center><h1>PORTFOLIO</h1></p>
+<p align=center><h1 align=center>PORTFOLIO</h1></p>
 <p align=center>
   <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a></p>
 
