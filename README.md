@@ -2,11 +2,11 @@
   <picture><img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png" width="100%"></picture>
 </p>
 
-<p align=center># PORTFOLIO</p>
+<p align=center><h1>PORTFOLIO</h1></p>
 <p align=center>
   <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a></p>
 
-<p align=center>## WEB-SOVELLUSTEN PERUSTEET (5 OP)</p>
+<p align=center><h3>WEB-SOVELLUSTEN PERUSTEET (5 OP)</h3></p>
 <p align=center>Tehtävänä on luoda web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.</p>
 
 <p align=center>Valitsin tehtäväksi oman portfolioni</p>
