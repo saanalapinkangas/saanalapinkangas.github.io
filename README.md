@@ -5,7 +5,7 @@
 <p align=center>
   <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a> | <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a> | <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a></p>
   
-# PORTFOLIO
+<h2 align=center>PORTFOLIO</h2>
 
 Kurssi: WEB-sovellusten perusteet (5 OP)
 Tehtävänanto: Luo web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.
