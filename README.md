@@ -1,10 +1,16 @@
-Portfolio
+<p align=center>Portfolio
 
 <picture>
   <img src="[https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png](https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png)">
 </picture>
 
+## WEB-SOVELLUSTEN PERUSTEET (5 OP)
+Tehtävänä on luoda web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.
+
+Valitsin tehtäväksi oman portfolioni
+
 Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
+</p>
 
 ## HTML
 - Sivusto täyttää kaikki 5 kohtaa:
