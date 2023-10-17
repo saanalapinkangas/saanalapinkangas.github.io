@@ -1,13 +1,8 @@
-<p align=center>Portfolio
-
-<p align=center>
-  <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png" width="100%">
-</p>
-
 <p align=center>
   <picture><img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png" width="100%"></picture>
 </p>
 
+<p align=center># PORTFOLIO</p>
 <p align=center>
   <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a></p>
 
