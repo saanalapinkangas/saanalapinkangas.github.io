@@ -2,6 +2,27 @@ Portfolio
 
 Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
 
+## HTML
+- Sivusto täyttää kaikki 5 kohtaa:
+  - perus html-rakenne
+  - selkeästi erotellut osiot ja sisällöt
+  - linkkien, median ja lomakkeen käyttöä
+  - [taulukko-näkymä luotu erilliselle sivulle](https://saanalapinkangas.github.io/deletelater.html)
+  - fiksusti rakennettu rakenne `<div>, <footer>, <form>`
+- [Etusivun ja portfolion HTML](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/index.html)
+- [About me -sivun HTML](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/aboutme.html)
+- [Portfolion mallisivu](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/brand_lapinkettu.html)
+
+## CSS
+- Sivusto täyttää kaikki 5 CSS-osiota:
+  - perus css-tyylittely (värit, fontit)
+  - luokkien ja id:n käyttö
+  - responsiivisuus
+  - käytössä float
+  - tyylittelyn käyttö käyttäjäystävällisyyden hyväksi
+- [Etusivun CSS](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/assets/style.css)
+- [Muiden sivujen CSS](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/7bd7437a5842e2f438e6c35103d1927ab79d7c4c/assets/stylePages.css)
+
 ## Osa 3: JavaScript
 ### 1/5 Simple interactions
 - Tapahtumankäsittelijä, joka reagoi klikkaukseen avaamalla kuvat uudessa ikkunassa (modaali). Jokainen portfolion esittelykuva avautuu näin. [modal.js](https://github.com/saanalapinkangas/saanalapinkangas.github.io/blob/42fd03c13a83a9d8f563c4d80f2d7156104e624b/assets/modal.js)
