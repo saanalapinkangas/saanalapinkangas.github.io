@@ -1,13 +1,16 @@
 <p align=center>Portfolio
 
-<picture>
-  <img src="[https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png](https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png)">
-</picture>
+<p align=center><picture>
+  <img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png">
+</picture></p>p>
 
-## WEB-SOVELLUSTEN PERUSTEET (5 OP)
-Tehtävänä on luoda web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.
+<p align=center>
+  <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a></p>
 
-Valitsin tehtäväksi oman portfolioni
+<p align=center>## WEB-SOVELLUSTEN PERUSTEET (5 OP)</p>
+<p align=center>Tehtävänä on luoda web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.</p>
+
+<p align=center>Valitsin tehtäväksi oman portfolioni</p>
 
 Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
 </p>
