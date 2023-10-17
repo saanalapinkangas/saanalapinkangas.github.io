@@ -8,6 +8,7 @@
 <h2 align=center>PORTFOLIO</h2>
 
 Kurssi: WEB-sovellusten perusteet (5 OP)
+
 Tehtävänanto: Luo web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.
 
 ### Selvitys työstä:
