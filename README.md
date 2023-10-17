@@ -1,5 +1,7 @@
 Portfolio
 
+(/images/files/readme.png)
+
 Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
 
 ## HTML
