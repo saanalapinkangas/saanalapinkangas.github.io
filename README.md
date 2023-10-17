@@ -2,17 +2,19 @@
   <picture><img src="https://raw.githubusercontent.com/saanalapinkangas/saanalapinkangas.github.io/main/images/files/readme.png" width="100%"></picture>
 </p>
 
-<p align=center><h1 align=center>PORTFOLIO</h1></p>
 <p align=center>
-  <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a></p>
+  <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a> | <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a> | <a href=https://saanalapinkangas.github.io/index.html>PORTFOLIO</a></p>
+  
+# PORTFOLIO
 
-<p align=center><h3>WEB-SOVELLUSTEN PERUSTEET (5 OP)</h3></p>
-<p align=center>Tehtävänä on luoda web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.</p>
+Kurssi: WEB-sovellusten perusteet (5 OP)
+Tehtävänanto: Luo web-sivusto, jossa hyödynnetty kurssilla käytyjä asioita.
 
-<p align=center>Valitsin tehtäväksi oman portfolioni</p>
+### Selvitys työstä:
+Valitsin tehtäväksi oman portfolioni
 
 Alle on listattu esimerkkejä, joissa halutut ominaisuudet on nähtävillä.
-</p>
+
 
 ## HTML
 - Sivusto täyttää kaikki 5 kohtaa:
