@@ -1,0 +1,17 @@
+/* isojen rakenteiden asettelu: header, footer, grid, container */
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 50;
+    }
+    
+    
+    .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    }

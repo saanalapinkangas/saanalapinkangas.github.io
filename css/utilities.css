@@ -1,0 +1,10 @@
+/* apuluokat: .text-center, .hidden, marginit, paddings */
+
+/* Apuluokat */
+.text-center {
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
