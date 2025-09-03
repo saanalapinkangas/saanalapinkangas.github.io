@@ -1,6 +1,6 @@
 /* pienemmät osat: napit, kortit, navigaatio */
 
-/* Header, otsikko */
+/********* Header, otsikko ********/
 .brand {
     display: flex;
     align-items: center;
@@ -8,12 +8,14 @@
   }
   
   .brand__name {
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: .2px;
-    color: var(--ruoste);
+    color: var(--rust);
+    font-family: 'Merriweather', serif;
+    font-size: 1.3em;
   }
   
-  /* Desktop links */
+  /******* Desktop links ********/
   .nav__links {
     display: flex;
     gap: .5rem;
@@ -28,24 +30,23 @@
     padding: .6rem .9rem;
     border-radius: 12px;
     line-height: 1;
-    color: var(--ruoste);
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--grey);
+    text-transform: uppercase;
   }
   
   .nav__link:hover {
-    background: #fff;
+    color: var(--green);
   }
   
-  .nav__link:focus-visible {
-    outline: 3px solid var(--ring);
-    outline-offset: 2px;
-  }
-  
-  /* Hamburger button */
+  /******** Hamburger button ********/
 .nav__toggle {
   display: none;
   border: 0;
   background: transparent;
-  color: var(--text);
+  color: var(--grey);
   width: 44px;
   height: 44px;
   border-radius: 12px;
@@ -56,7 +57,7 @@
 }
 
 .nav__toggle:hover {
-  background: rgba(148,163,184,.12);
+  color: var(--lime);
 }
 
 .nav__toggle:focus-visible {
@@ -93,7 +94,7 @@
   translate: 0 7px;
 }
   
-  /* Mobile menu */
+  /******** Mobile menu ********/
 .mobile {
   display: none;
 }
@@ -114,7 +115,7 @@
     right: 0;
     height: 100%;
     width: 70%;
-    background: #BB6653;
+    background: var(--rust);
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
@@ -140,8 +141,12 @@
 
   .mobile__link {
     display: block;
-    color: white;
-    text-align: left;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
     padding: .9rem 0;
     border-radius: 0;
     opacity: 0;
@@ -150,7 +155,7 @@
   }
 
   .mobile__link:hover {
-    text-decoration: underline;
+    font-weight: 500;
   }
 
   .mobile__link:focus-visible {
@@ -158,7 +163,7 @@
     outline-offset: 2px;
   }
 
-  /* Linkkien stagger-efekti */
+  /******** Linkkien stagger-efekti ********/
   .is-open .mobile__link {
     opacity: 1;
     transform: translateX(0);
