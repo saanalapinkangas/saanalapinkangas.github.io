@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="fi">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio – Navigaatio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -16,15 +18,16 @@
       <!-- Desktop links -->
       <nav aria-label="Päänavigaatio">
         <ul class="nav__links" id="nav-links-desktop">
-          <li><a class="nav__link" href="#projektit">Projektit</a></li>
-          <li><a class="nav__link" href="#taidot">Taidot</a></li>
-          <li><a class="nav__link" href="#minusta">Minusta</a></li>
-          <li><a class="nav__link" href="#ota-yhteytta">Ota yhteyttä</a></li>
+          <li><a class="nav__link" href="index.html">Etusivu</a></li>
+          <li><a class="nav__link" href="portfolio">Portfolio</a></li>
+          <li><a class="nav__link" href="minusta">Minusta</a></li>
+          <li><a class="nav__link" href="yhteystiedot">Yhteystiedot</a></li>
         </ul>
       </nav>
 
       <!-- Hamburger -->
-      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Avaa valikko">
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu"
+        aria-label="Avaa valikko">
         <span class="hamburger" aria-hidden="true"></span>
       </button>
     </div>
@@ -42,42 +45,85 @@
     </div>
   </header>
 
-  <main class="section">
-    <h1>Tervetuloa!</h1>
-    <p>Tämä on esimerkkisivu demotaksesi responsiivista navigaatiota. Kutista selainikkunaa nähdäksesi hamburger-valikon.</p>
+  <section class="section darkBg">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hei, olen Saana!</h1>
+          <p>
+            Olen Saana, tietotekniikan opiskelija ja suunnittelija. 
+            Täällä esittelen projektejani ja osaamistani.
+          </p>
+          <p>linkit: cv/minusta, sosiaalinen media</p>
+          <p>häilyvä nuoli siirtymään portfolioon?</p>
+        </div>
+        <div class="hero-image">
+          <img src="images/index_cropped.png" alt="Etusivun kuva">
+        </div>
+      </div>
     
-    <section id="projektit" style="height:60vh">
-        <p>projektit</p></section>
+  </section>
+  <section class="section lightBg" id="projektit">
+    <p>Tähän etusivulle vain "best of the best" -tyyppiset esittelyt, jonka jälkeen ohjataan portfolio-sivulle jossa näkyy kaikki (plus mahdollisia suodattimia avainsanoista?). Jokainen portfolion osa saa oman sivunsa. Tehdäänkö niiden alalaitaan siirtymä seuraavaan? (huom! numeroi nousevassa järjestyksessä)</p>
 
-        <section class="portfolio">
-          <h1>Portfolio</h1>
-          <div class="gallery">
-            <article class="gallery__item">
-              <img src="images/proj3.jpg" alt="Projektin 1 esittelykuva">
-              <h3 class="gallery__caption">Verkkosivuprojekti</h3>
-            </article>
-            <article class="gallery__item">
-              <img src="images/prodDes1.jpeg" alt="Projektin 2 esittelykuva">
-              <h3 class="gallery__caption">Mobiilisovellus</h3>
-            </article>
-            <article class="gallery__item">
-              <img src="images/lapinkettu1.jpeg" alt="Projektin 3 esittelykuva">
-              <h3 class="gallery__caption">Tietokantajärjestelmä</h3>
-            </article>
-            <article class="gallery__item">
-              <img src="images/proj1.png" alt="Projektin 2 esittelykuva">
-              <h3 class="gallery__caption">Mobiilisovellus</h3>
-            </article>
-          </div>
-        </section>
+    <section class="portfolio">
+      <!-- Item 1 -->
+      <div class="item">
+        <div class="text">
+          <h2>Example</h2>
+          <p>info</p>
+          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
+        </div>
+        <div class="image">
+          <img src="images/proj3.jpg" alt="info">
+        </div>
+      </div>
+  
+      <!-- Item 2 -->
+      <div class="item">
+        <div class="text">
+          <h2>Client: Example Project</h2>
+          <p>info</p>
+          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
+        </div>
+        <div class="image">
+          <img src="images/prodDes1.jpeg" alt="Example logo">
+        </div>
+      </div>
 
-    <section id="taidot" style="height:auto">taidot</section>
-    <section id="minusta" style="height:auto"></section>
-    <section id="ota-yhteytta" style="height:60vh"></section>
-  </main>
+      <!-- Item 3 -->
+      <div class="item">
+        <div class="text">
+          <h2>Example</h2>
+          <p>info</p>
+          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
+        </div>
+        <div class="image">
+          <img src="images/proj1.png" alt="info">
+        </div>
+      </div>
+  
+      <!-- Item 4 -->
+      <div class="item">
+        <div class="text">
+          <h2>Client: Example Project</h2>
+          <p>info</p>
+          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
+        </div>
+        <div class="image">
+          <img src="images/lapinkettu1.jpeg" alt="Example logo">
+        </div>
+      </div>
 
-  <footer class="footer">txt</footer>
+    </section>
+
+  </section>
+
+  <section class="section lightBg" id="taidot">LYHYT esittely, josta ohjataan oikeaan esittelyyn erilliselle sivulle</section>
+
+
+  <footer class="footer">Yhteystiedot, sosiaalinen media, navigaatio / vai pelkkä copyright? onko tarvetta täyttää?</footer>
 
   <script src="java.js"></script>
 </body>
+
 </html>

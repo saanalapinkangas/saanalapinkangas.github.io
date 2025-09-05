@@ -8,3 +8,29 @@
   .hidden {
     display: none !important;
   }
+
+  /* Etusivu */
+  .hero-content {
+    display: flex;
+    flex-direction: row; /* teksti vasemmalle, kuva oikealle */
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .hero-image {
+    max-width: 35vw; /* kuva pysyy pienehkönä */
+    flex-shrink: 0;   /* ei kutistu liikaa */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    display: block;
+    
+  }
+
+  .hero-image img:hover {
+    filter: hue-rotate(300deg);
+  }

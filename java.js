@@ -34,3 +34,16 @@ if(e.key === 'Escape') setOpen(false);
 const mql = window.matchMedia('(min-width: 801px)');
 mql.addEventListener('change', (e) => { if(e.matches) setOpen(false); });
 })();
+
+
+// Intersection Observer animaatioon
+const items = document.querySelectorAll('.item');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, {threshold: 0.2});
+
+items.forEach(item => observer.observe(item));
