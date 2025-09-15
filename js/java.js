@@ -36,14 +36,34 @@ mql.addEventListener('change', (e) => { if(e.matches) setOpen(false); });
 })();
 
 
-// Intersection Observer animaatioon
-const items = document.querySelectorAll('.item');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
+// Intersection Observer animaatioon: alustetaan dynaamisesti reitityksen jälkeenkin
+window.initGalleryReveal = function initGalleryReveal(){
+  try {
+    if (window.__galleryObserver) {
+      window.__galleryObserver.disconnect();
     }
-  });
-}, {threshold: 0.2});
 
-items.forEach(item => observer.observe(item));
+    const items = document.querySelectorAll('.item');
+    if (!items.length) return; // ei mitään havainnoitavaa tällä sivulla
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    items.forEach(item => observer.observe(item));
+    window.__galleryObserver = observer;
+  } catch (e) {
+    // no-op
+  }
+};
+
+// Alusta myös suoran latauksen tapauksessa
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => window.initGalleryReveal());
+} else {
+  window.initGalleryReveal();
+}

@@ -18,10 +18,10 @@
       <!-- Desktop links -->
       <nav aria-label="Päänavigaatio">
         <ul class="nav__links" id="nav-links-desktop">
-          <li><a class="nav__link" href="index.html">Etusivu</a></li>
-          <li><a class="nav__link" href="portfolio">Portfolio</a></li>
-          <li><a class="nav__link" href="minusta">Minusta</a></li>
-          <li><a class="nav__link" href="yhteystiedot">Yhteystiedot</a></li>
+          <li><a class="nav__link" href="#/">Etusivu</a></li>
+          <li><a class="nav__link" href="#/portfolio">Portfolio</a></li>
+          <li><a class="nav__link" href="#/info">Minusta</a></li>
+          <li><a class="nav__link" href="#/yhteystiedot">Yhteystiedot</a></li>
         </ul>
       </nav>
 
@@ -36,94 +36,24 @@
     <div id="mobileMenu" class="mobile" hidden>
       <div class="mobile__inner container">
         <ul class="mobile__list">
-          <li><a class="mobile__link" href="#projektit">Projektit</a></li>
-          <li><a class="mobile__link" href="#taidot">Taidot</a></li>
-          <li><a class="mobile__link" href="#minusta">Minusta</a></li>
-          <li><a class="mobile__link" href="#ota-yhteytta">Ota yhteyttä</a></li>
+          <li><a class="mobile__link" href="#/">Etusivu</a></li>
+          <li><a class="mobile__link" href="#/portfolio">Portfolio</a></li>
+          <li><a class="mobile__link" href="#/info">Minusta</a></li>
+          <li><a class="mobile__link" href="#/yhteystiedot">Yhteystiedot</a></li>
         </ul>
       </div>
     </div>
   </header>
 
-  <section class="section darkBg">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Hei, olen Saana!</h1>
-          <p>
-            Olen Saana, tietotekniikan opiskelija ja suunnittelija. 
-            Täällä esittelen projektejani ja osaamistani.
-          </p>
-          <p>linkit: cv/minusta, sosiaalinen media</p>
-          <p>häilyvä nuoli siirtymään portfolioon?</p>
-        </div>
-        <div class="hero-image">
-          <img src="images/index_cropped.png" alt="Etusivun kuva">
-        </div>
-      </div>
-    
-  </section>
-  <section class="section lightBg" id="projektit">
-    <p>Tähän etusivulle vain "best of the best" -tyyppiset esittelyt, jonka jälkeen ohjataan portfolio-sivulle jossa näkyy kaikki (plus mahdollisia suodattimia avainsanoista?). Jokainen portfolion osa saa oman sivunsa. Tehdäänkö niiden alalaitaan siirtymä seuraavaan? (huom! numeroi nousevassa järjestyksessä)</p>
-
-    <section class="portfolio">
-      <!-- Item 1 -->
-      <div class="item">
-        <div class="text">
-          <h2>Example</h2>
-          <p>info</p>
-          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
-        </div>
-        <div class="image">
-          <img src="images/proj3.jpg" alt="info">
-        </div>
-      </div>
-  
-      <!-- Item 2 -->
-      <div class="item">
-        <div class="text">
-          <h2>Client: Example Project</h2>
-          <p>info</p>
-          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
-        </div>
-        <div class="image">
-          <img src="images/prodDes1.jpeg" alt="Example logo">
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="item">
-        <div class="text">
-          <h2>Example</h2>
-          <p>info</p>
-          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
-        </div>
-        <div class="image">
-          <img src="images/proj1.png" alt="info">
-        </div>
-      </div>
-  
-      <!-- Item 4 -->
-      <div class="item">
-        <div class="text">
-          <h2>Client: Example Project</h2>
-          <p>info</p>
-          <div class="tags">UX/UI Design + UX Research + Health Tech + B2B SaaS</div>
-        </div>
-        <div class="image">
-          <img src="images/lapinkettu1.jpeg" alt="Example logo">
-        </div>
-      </div>
-
-    </section>
-
-  </section>
-
-  <section class="section lightBg" id="taidot">LYHYT esittely, josta ohjataan oikeaan esittelyyn erilliselle sivulle</section>
+  <main id="app">
+    <!-- Content will be loaded here by router.js -->
+  </main>
 
 
   <footer class="footer">Yhteystiedot, sosiaalinen media, navigaatio / vai pelkkä copyright? onko tarvetta täyttää?</footer>
 
   <script src="js/java.js"></script>
+  <script src="js/router.js" defer></script>
 </body>
 
 </html>
