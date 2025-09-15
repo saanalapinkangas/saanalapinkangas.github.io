@@ -26,16 +26,29 @@ const routes = {
   }
   
   function parseRoute() {
-    const hash = location.hash.replace(/^#/, ""); // esim. "/about"
-    return routes[hash] ?? null;
+    const hash = location.hash.replace(/^#/, ""); // esim. "/portfolio/example"
+    // 1) Suora osuma staattisiin reitteihin
+    if (routes[hash]) return routes[hash];
+    // 2) Dynaaminen projekti: "/portfolio/:slug"
+    const m = hash.match(/^\/portfolio\/([a-z0-9-]+)$/i);
+    if (m) return `projects/${m[1]}`; // lataa pages/projects/:slug.html
+    return null;
   }
   
   function updateActiveNav() {
     const links = document.querySelectorAll("nav a");
+    const current = location.hash.replace(/^#/, "") || "/";
     links.forEach(a => {
       const target = a.getAttribute("href").replace(/^#/, "");
-      const current = location.hash.replace(/^#/, "") || "/";
-      a.classList.toggle("active", target === current);
+      let isActive = false;
+      if (target === "/") {
+        isActive = current === "/";
+      } else if (target === "/portfolio") {
+        isActive = current === "/portfolio" || current.startsWith("/portfolio/");
+      } else {
+        isActive = target === current;
+      }
+      a.classList.toggle("active", isActive);
     });
   }
   

@@ -1,0 +1,23 @@
+/* Temporary tweaks for example project pages */
+.project {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.project img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+.project .project-nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project .project-nav a {
+  text-decoration: none;
+}
+

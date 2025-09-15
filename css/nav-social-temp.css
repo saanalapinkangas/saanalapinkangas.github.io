@@ -1,0 +1,55 @@
+/* Väliaikainen tyylitiedosto some-ikoneille navissa */
+
+/* Asetellaan päänavi sisällä linkit + ikonit yhteen riviin */
+header nav[aria-label="Päänavigaatio"] {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.nav__social {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-left: .5rem;
+}
+
+.nav__social .social {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey);
+}
+
+.nav__social .social:hover {
+  color: var(--green);
+}
+
+/* Piilota päänavin ikonit mobiilissa; näytetään ne mobiilipaneelissa */
+@media (max-width: 800px) {
+  .nav__social { display: none; }
+}
+
+/* Mobiilipaneelin ikonirivi */
+.mobile__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mobile__social .social {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.mobile__social .social:hover {
+  color: var(--lime);
+}
+
