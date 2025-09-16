@@ -1,7 +1,26 @@
 <section class="section lightBg" id="projektit">
     <p>Tähän etusivulle vain "best of the best" -tyyppiset esittelyt, jonka jälkeen ohjataan portfolio-sivulle jossa näkyy kaikki (plus mahdollisia suodattimia avainsanoista?). Jokainen portfolion osa saa oman sivunsa. Tehdäänkö niiden alalaitaan siirtymä seuraavaan? (huom! numeroi nousevassa järjestyksessä)</p>
-  
-    <section class="portfolio">
+
+    <div class="portfolio-toggle" data-portfolio-toggle-group>
+      <button
+        type="button"
+        data-portfolio-target="portfolio-koodaus"
+        aria-controls="portfolio-koodaus"
+        aria-pressed="true"
+      >
+        Koodaus
+      </button>
+      <button
+        type="button"
+        data-portfolio-target="portfolio-grafiikka"
+        aria-controls="portfolio-grafiikka"
+        aria-pressed="false"
+      >
+        Grafiikka
+      </button>
+    </div>
+
+    <section class="portfolio" id="portfolio-koodaus" data-portfolio-section data-label="Koodaus" aria-hidden="false">
       <!-- Item 1 -->
       <div class="item">
         <div class="text">
@@ -15,7 +34,7 @@
           </a>
         </div>
       </div>
-  
+
       <!-- Item 2 -->
       <div class="item">
         <div class="text">
@@ -27,7 +46,7 @@
           <img src="/images/prodDes1.jpeg" alt="Example logo">
         </div>
       </div>
-  
+
       <!-- Item 3 -->
       <div class="item">
         <div class="text">
@@ -39,7 +58,7 @@
           <img src="/images/proj1.png" alt="info">
         </div>
       </div>
-  
+
       <!-- Item 4 -->
       <div class="item">
         <div class="text">
@@ -51,6 +70,47 @@
           <img src="/images/lapinkettu1.jpeg" alt="Example logo">
         </div>
       </div>
-  
+
+    </section>
+
+    <section class="portfolio" id="portfolio-grafiikka" data-portfolio-section data-label="Grafiikka" hidden aria-hidden="true">
+      <div class="portfolio-gallery" role="list" aria-label="Grafiikan projektikuvia">
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/kuvitus1.jpeg" alt="Illustratiivinen kuvitus 1" loading="lazy">
+          <figcaption>Illustratiivinen kuvitus</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/kuvitus3.jpeg" alt="Illustratiivinen kuvitus 3" loading="lazy">
+          <figcaption>Kuvitussarja</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/kuvitus6.jpeg" alt="Illustratiivinen kuvitus 6" loading="lazy">
+          <figcaption>Graafinen kokeilu</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/kuvitus11.jpeg" alt="Illustratiivinen kuvitus 11" loading="lazy">
+          <figcaption>Lehtikuvitus</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/kuvitus12.jpeg" alt="Illustratiivinen kuvitus 12" loading="lazy">
+          <figcaption>Julistekonsepti</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/kuitus5.jpeg" alt="Kuitus-kollaasin koevedos" loading="lazy">
+          <figcaption>Kollaasitekniikka</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/tuotekuvaus3.jpeg" alt="Tuotekuvaus 3" loading="lazy">
+          <figcaption>Tuotekuvaus</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/tuotesuunnittelu11.jpeg" alt="Tuotesuunnittelu 11" loading="lazy">
+          <figcaption>Tuotesuunnittelu</figcaption>
+        </figure>
+        <figure class="portfolio-gallery__item" role="listitem">
+          <img src="/images/art/tuotesuunnittelu13.jpeg" alt="Tuotesuunnittelu 13" loading="lazy">
+          <figcaption>Pakkauksen luonnos</figcaption>
+        </figure>
+      </div>
     </section>
     </section>

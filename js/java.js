@@ -61,6 +61,83 @@ window.initGalleryReveal = function initGalleryReveal(){
   }
 };
 
+window.initPortfolioToggle = function initPortfolioToggle() {
+  try {
+    const appRoot = document.getElementById('app');
+    if (!appRoot) return;
+
+    const group = appRoot.querySelector('[data-portfolio-toggle-group]');
+    if (!group) return;
+
+    if (group.dataset.toggleInitialized === 'true') {
+      return;
+    }
+
+    const buttons = Array.from(group.querySelectorAll('[data-portfolio-target]'));
+    const sections = Array.from(appRoot.querySelectorAll('[data-portfolio-section]'));
+
+    if (!buttons.length || !sections.length) return;
+
+    const sectionIds = new Set(sections.map(section => section.id));
+
+    let activeId = sections.find(section => !section.hidden && section.getAttribute('aria-hidden') !== 'true');
+    activeId = activeId ? activeId.id : null;
+
+    if (!activeId) {
+      const firstButton = buttons[0];
+      activeId = firstButton ? firstButton.getAttribute('data-portfolio-target') : null;
+    }
+
+    if (!activeId && sections[0]) {
+      activeId = sections[0].id;
+    }
+
+    function showSection(targetId) {
+      if (!targetId || !sectionIds.has(targetId)) {
+        return;
+      }
+
+      sections.forEach(section => {
+        const isActive = section.id === targetId;
+        section.hidden = !isActive;
+        section.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      buttons.forEach(button => {
+        const isActive = button.getAttribute('data-portfolio-target') === targetId;
+        button.setAttribute('aria-pressed', String(isActive));
+        button.classList.toggle('is-active', isActive);
+      });
+
+      activeId = targetId;
+
+      if (typeof window.initGalleryReveal === 'function') {
+        window.initGalleryReveal();
+      }
+    }
+
+    buttons.forEach(button => {
+      const targetId = button.getAttribute('data-portfolio-target');
+
+      if (!sectionIds.has(targetId)) {
+        button.disabled = true;
+        return;
+      }
+
+      button.addEventListener('click', () => {
+        if (activeId === targetId) return;
+        showSection(targetId);
+      });
+    });
+
+    showSection(activeId);
+
+    group.dataset.toggleInitialized = 'true';
+  } catch (e) {
+    // no-op
+  }
+};
+
 // Alusta myös suoran latauksen tapauksessa
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => window.initGalleryReveal());

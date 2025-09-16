@@ -5,6 +5,12 @@ const routes = {
     "/portfolio": "portfolio",
   };
   
+  const projectPages = [
+    { slug: "example", title: "Taide 2" },
+    { slug: "example-2", title: "Example-projekti 2" },
+    { slug: "example-3", title: "Taide3" },
+  ];
+  
   const app = document.getElementById("app");
   
   async function loadPartial(name) {
@@ -13,11 +19,18 @@ const routes = {
       if (!res.ok) throw new Error(res.statusText);
       const html = await res.text();
       app.innerHTML = html;
+      if (name && name.startsWith("projects/")) {
+        const slug = name.split("/")[1];
+        injectProjectNavigation(slug);
+      }
       updateActiveNav();
       updateTitleFromH1();
       // Alusta sivukohtaiset efektit (esim. gallerian IntersectionObserver)
       if (typeof window.initGalleryReveal === 'function') {
         window.initGalleryReveal();
+      }
+      if (typeof window.initPortfolioToggle === 'function') {
+        window.initPortfolioToggle();
       }
       window.scrollTo({ top: 0, behavior: "instant" });
     } catch (e) {
@@ -33,6 +46,35 @@ const routes = {
     const m = hash.match(/^\/portfolio\/([a-z0-9-]+)$/i);
     if (m) return `projects/${m[1]}`; // lataa pages/projects/:slug.html
     return null;
+  }
+  
+  function injectProjectNavigation(slug) {
+    const nav = app.querySelector(".project-nav");
+    if (!nav) return;
+
+    const index = projectPages.findIndex(project => project.slug === slug);
+    if (index === -1) {
+      nav.innerHTML = "";
+      return;
+    }
+
+    nav.innerHTML = "";
+
+    const prev = projectPages[index - 1];
+    if (prev) {
+      const prevLink = document.createElement("a");
+      prevLink.href = `#/portfolio/${prev.slug}`;
+      prevLink.textContent = `← ${prev.title}`;
+      nav.appendChild(prevLink);
+    }
+
+    const next = projectPages[index + 1];
+    if (next) {
+      const nextLink = document.createElement("a");
+      nextLink.href = `#/portfolio/${next.slug}`;
+      nextLink.textContent = `${next.title} →`;
+      nav.appendChild(nextLink);
+    }
   }
   
   function updateActiveNav() {
