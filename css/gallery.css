@@ -49,19 +49,16 @@
   column-width: 300px;
   column-gap: 2rem;
   width: 100%;
-  counter-reset: portfolio-gallery-counter;
 }
 
 .portfolio-gallery__item {
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 5px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   margin: 0 0 2rem;
   display: inline-block;
   width: 100%;
   break-inside: avoid;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-gallery__item::after {
@@ -72,18 +69,12 @@
   opacity: 0;
   border-radius: inherit;
   z-index: 1;
-  transition: opacity 0.3s ease;
-}
-
-.portfolio-gallery__item:hover,
-.portfolio-gallery__item:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 22px rgba(0, 0, 0, 0.12);
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .portfolio-gallery__item:hover::after,
 .portfolio-gallery__item:focus-within::after {
-  opacity: 0.75;
+  opacity: 0.50;
 }
 
 .portfolio-gallery__item img {
@@ -92,38 +83,36 @@
   display: block;
   position: relative;
   z-index: 0;
+  transition: filter 0.4s ease;
 }
+
+.portfolio-gallery__item:hover img,
+.portfolio-gallery__item:focus-within img {
+  filter: brightness(0.8);
+}
+
 
 .portfolio-gallery__item figcaption {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 1.25rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.90rem;
+  font-weight: 600;
   color: #fff;
   letter-spacing: 0.04em;
   opacity: 0;
-  transform: translateY(10px);
   pointer-events: none;
   z-index: 2;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.portfolio-gallery__item figcaption::before {
-  counter-increment: portfolio-gallery-counter;
-  content: counter(portfolio-gallery-counter) ". ";
-  font-weight: 600;
-  margin-right: 0.5rem;
-  color: inherit;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .portfolio-gallery__item:hover figcaption,
 .portfolio-gallery__item:focus-within figcaption {
   opacity: 1;
-  transform: translateY(0);
 }
 
 @media (max-width: 1024px) {
@@ -200,19 +189,20 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
 .image img {
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.6s ease;
+  transform-origin: center;
 }
 
-.image:hover img {
-  transform: scale(1.10);
-  opacity: 0.70;
+.portfolio .image:hover img {
+  transform: scale(1.1);
 }
 
 /* Project cards enter with a slight slide/fade animation */
