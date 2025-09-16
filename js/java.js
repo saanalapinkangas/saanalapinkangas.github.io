@@ -138,9 +138,127 @@ window.initPortfolioToggle = function initPortfolioToggle() {
   }
 };
 
+window.initPortfolioLightbox = function initPortfolioLightbox() {
+  try {
+    const galleries = Array.from(document.querySelectorAll('[data-lightbox-gallery]'));
+    if (!galleries.length) return;
+
+    let overlay = document.getElementById('portfolioLightbox');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'portfolioLightbox';
+      overlay.className = 'portfolio-lightbox';
+      overlay.hidden = true;
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.innerHTML = [
+        '<figure class="portfolio-lightbox__figure">',
+        '  <img src="" alt="" loading="lazy" />',
+        '  <figcaption class="portfolio-lightbox__caption"></figcaption>',
+        '</figure>'
+      ].join('');
+      document.body.appendChild(overlay);
+    }
+
+    const overlayImage = overlay.querySelector('img');
+    const overlayCaption = overlay.querySelector('figcaption');
+
+    if (!overlayImage || !overlayCaption) {
+      return;
+    }
+
+    const closeLightbox = () => {
+      if (overlay.hidden) return;
+      overlay.hidden = true;
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('has-portfolio-lightbox');
+      document.removeEventListener('keydown', onKeyDown);
+    };
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+
+    if (!overlay.dataset.bound) {
+      overlay.addEventListener('click', () => {
+        closeLightbox();
+      });
+      overlay.dataset.bound = 'true';
+    }
+
+    const openLightbox = (image, captionText) => {
+      overlayImage.src = image.currentSrc || image.src;
+      overlayImage.alt = image.alt || '';
+      overlayCaption.textContent = captionText || '';
+      overlay.hidden = false;
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('has-portfolio-lightbox');
+      document.addEventListener('keydown', onKeyDown);
+    };
+
+    galleries.forEach(gallery => {
+      if (gallery.dataset.lightboxInitialized === 'true') {
+        return;
+      }
+
+      gallery.addEventListener('click', (event) => {
+        const rawTarget = event.target;
+        if (!(rawTarget instanceof Element)) {
+          return;
+        }
+
+        const trigger = rawTarget.closest('[data-lightbox-item], img');
+        if (!trigger) {
+          return;
+        }
+
+        const targetImage = trigger instanceof HTMLImageElement
+          ? trigger
+          : trigger.querySelector('img');
+
+        if (!(targetImage instanceof HTMLImageElement)) {
+          return;
+        }
+
+        const skip = trigger.closest('[data-lightbox-disabled]');
+        if (skip) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const figure = targetImage.closest('figure');
+        const caption = figure ? figure.querySelector('figcaption') : null;
+        const captionText = caption ? caption.textContent.trim() : (targetImage.alt || '');
+
+        openLightbox(targetImage, captionText);
+      });
+
+      gallery.dataset.lightboxInitialized = 'true';
+    });
+  } catch (e) {
+    // no-op
+  }
+};
+
 // Alusta myös suoran latauksen tapauksessa
+const runInitializers = () => {
+  if (typeof window.initGalleryReveal === 'function') {
+    window.initGalleryReveal();
+  }
+  if (typeof window.initPortfolioToggle === 'function') {
+    window.initPortfolioToggle();
+  }
+  if (typeof window.initPortfolioLightbox === 'function') {
+    window.initPortfolioLightbox();
+  }
+};
+
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => window.initGalleryReveal());
+  document.addEventListener('DOMContentLoaded', runInitializers);
 } else {
-  window.initGalleryReveal();
+  runInitializers();
 }

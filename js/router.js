@@ -32,6 +32,9 @@ const routes = {
       if (typeof window.initPortfolioToggle === 'function') {
         window.initPortfolioToggle();
       }
+      if (typeof window.initPortfolioLightbox === 'function') {
+        window.initPortfolioLightbox();
+      }
       window.scrollTo({ top: 0, behavior: "instant" });
     } catch (e) {
       app.innerHTML = `<h1>404</h1><p>Sivua ei löytynyt.</p>`;
