@@ -11,8 +11,17 @@
 }
 
 .information {
-  width: 60%;
+  width: 70%;
   margin-bottom: 2rem;
+}
+
+.information .tags {
+  font-size: 0.8rem;
+  color: var(--green);
+  font-weight: 400;
+  opacity: 1;
+  transform: none;
+  margin-top: 2rem;
 }
 
 .project img {
@@ -106,9 +115,31 @@ h3 {
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 1.8;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
   color: var(--rust);
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-meta__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.project-meta__item:hover {
+  font-weight: 600;
+}
+
+.information .fa-github {
+  font-size: 1.2rem;
 }
 
 .breadcrumb {
