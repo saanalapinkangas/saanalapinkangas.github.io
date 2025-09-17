@@ -6,9 +6,10 @@ const routes = {
   };
   
   const projectPages = [
-    { slug: "example", title: "Taide 2" },
-    { slug: "example-2", title: "Example-projekti 2" },
-    { slug: "example-3", title: "Taide3" },
+    { slug: "projekti1", title: "Lasten interaktiivinen puuhakirja" },
+    { slug: "projekti2", title: "Pankkiautomaatin simulaatio" },
+    { slug: "projekti3", title: "Sivu elokuvaharrastajille" },
+    { slug: "opas_oys", title: "Opas sädehoitoon" },
   ];
   
   const app = document.getElementById("app");
@@ -46,7 +47,7 @@ const routes = {
     // 1) Suora osuma staattisiin reitteihin
     if (routes[hash]) return routes[hash];
     // 2) Dynaaminen projekti: "/portfolio/:slug"
-    const m = hash.match(/^\/portfolio\/([a-z0-9-]+)$/i);
+    const m = hash.match(/^\/portfolio\/([a-z0-9_-]+)$/i);
     if (m) return `projects/${m[1]}`; // lataa pages/projects/:slug.html
     return null;
   }
