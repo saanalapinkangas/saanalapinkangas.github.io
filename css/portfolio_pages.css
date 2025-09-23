@@ -60,6 +60,21 @@
   padding: 2rem 0;
 }
 
+.project-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-media img,
+.project-media video {
+  flex: 1 1 320px;
+  max-width: 80%;
+  width: 100%;
+}
+
 
 .project-gallery {
   column-width: 400px;
@@ -132,6 +147,10 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+.project-meta__item > i {
+  margin-right: 0.15em;
 }
 
 .project-meta__item:hover {
