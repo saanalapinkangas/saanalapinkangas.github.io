@@ -14,16 +14,18 @@
     --green: #649263;
     --lime: #E1E9C9;
     --white: #ffffff;
-    }
-    
-    
-    /* Reset + base */
-    *, *::before, *::after {
+}
+
+
+/* Reset + base */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    }
-    
-    
-    body {
+}
+
+
+body {
     margin: 0;
     font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Noto Sans", sans-serif;
     background: var(--bg);
@@ -32,41 +34,54 @@
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    }
-    
-    
-    a {
+}
+
+
+a {
     color: inherit;
     text-decoration: none;
-    }
-    
-    
-    .container {
+}
+
+
+.container {
     max-width: 100%;
     margin-inline: auto;
     padding: 0 1rem;
-    }
+}
 
-    .section {
+.section {
     max-width: 100%;
     padding-left: 10vw;
     padding-right: 10vw;
     padding-top: 15vh;
-    min-height: 90vh;
-    }
+    min-height: 70vh;
+}
 
-    .darkBg {
+.section-next {
+    max-width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    min-height: 40vh;
+}
+
+@media (min-width: 1200px) {
+    .section-next {
+        min-height: 30vh;
+    }
+}
+
+
+.darkBg {
     background-color: var(--bgDark);
-    }
+}
 
-    .lightBg {
+.lightBg {
     background-color: var(--bg);
-    }
+}
 
-    h1 {
+h1 {
     font-family: 'Merriweather', serif;
     font-weight: 600;
     font-size: 1.9rem;
     line-height: 1.2;
-    }
-      
+}

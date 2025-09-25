@@ -21,20 +21,6 @@
     max-width: 35vw; /* kuva pysyy pienehkönä */
     flex-shrink: 0;   /* ei kutistu liikaa */
   }
-
-  .infoimg {
-    max-width: 30vw; /* kuva pysyy pienehkönä */
-    flex-shrink: 0;   /* ei kutistu liikaa */
-  }
-
-    .infoimg img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: contain;
-    display: block;
-    
-  }
   
   .hero-image img {
     width: 100%;
