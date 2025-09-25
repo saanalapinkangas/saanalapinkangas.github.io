@@ -14,8 +14,19 @@
     display: flex;
     flex-direction: row; /* teksti vasemmalle, kuva oikealle */
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
+    font-size: 1.1rem;
+    padding-bottom: 5vw;
   }
+
+  .hero-text p {
+    line-height: 2;
+    padding-top: 1.3rem;
+  }
+
+  .hero-content b{
+    font-weight: 500;
+}
   
   .hero-image {
     max-width: 35vw; /* kuva pysyy pienehkönä */
@@ -28,9 +39,18 @@
     border-radius: 12px;
     object-fit: contain;
     display: block;
-    
   }
 
   .hero-image img:hover {
     filter: hue-rotate(300deg);
+  }
+
+  @keyframes scroll-arrow-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
   }

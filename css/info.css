@@ -1,0 +1,210 @@
+/* Minusta-sivun yläesittely: */
+.infoHero {
+    display: flex;
+    flex-direction: row; /* teksti vasemmalle, kuva oikealle */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 80vh;
+    padding-left: 5vw;
+    margin-bottom: 5vw;
+    line-height: 1.8;
+}
+
+.infoHero b{
+    font-weight: 600;
+}
+
+  .infoimg {
+    margin-top: 5vw;
+    max-width: 30vw; /* kuva pysyy pienehkönä */
+    flex-shrink: 0;   /* ei kutistu liikaa */
+  }
+
+    .infoimg img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    
+  }
+
+  /* Yhteystiedot, taidot ja ohjelmistot: */
+.skillsFrame {
+    display: flex;
+    flex-direction: row; /* teksti vasemmalle, kuva oikealle */
+    align-items: flex-start;
+    gap: 10vw;
+    justify-content: center;
+    max-width: 100%;
+    padding: 2vw 10vw;
+    min-height: 50vh;
+}
+
+.skills {
+    width: 30%;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+}
+
+.skills a{
+    color: var(--green);
+}
+
+.skills a:hover{
+    font-weight: 500;
+}
+
+.skills b{
+    font-weight: 500;
+}
+
+.cv-link-button {
+  border: 1px solid var(--rust);
+  background: transparent;
+  color: var(--rust);
+  margin-top: 1rem;
+  padding: 0.6rem 1.8rem;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.cv-link-button:hover,
+.cv-link-button:focus-visible {
+  background: var(--rust);
+  color: #fff;
+  outline: none;
+}
+
+/* Työkokemus ja koulutus: */
+.info-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 5vw;
+}
+
+.info-item {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.info-item + .info-item {
+  border-top: 1px solid rgba(53, 53, 53, 0.15);
+}
+
+.info-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--rust);
+  list-style: none;
+}
+
+.info-item summary:hover {
+  color: var(--grey);
+}
+
+.info-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.info-item summary::after {
+  content: '';
+  width: 0.65rem;
+  height: 0.65rem;
+  border-right: 2px solid var(--rust);
+  border-bottom: 2px solid var(--rust);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.info-item summary:hover::after {
+  border-color: var(--green);
+}
+
+.info-item[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.info-item > p,
+.info-item .info-details,
+.info-item ul {
+  padding: 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--grey);
+  list-style-position: inside;
+  line-height: 2;
+}
+
+.info-item .info-details,
+.info-item ul {
+  padding-bottom: 1.25rem;
+}
+
+.info-item a, i {
+  margin-right: 0.5rem;
+  padding-left: 1.5rem;
+  color: var(--green);
+  transition: padding-left 0.3s smooth;
+}
+
+.info-item a:hover {
+  padding-left: 2rem;
+}
+
+.info-item > p:last-child {
+  padding-bottom: 1.25rem;
+  margin-bottom: 0;
+}
+
+.info-item li {
+  line-height: 2;
+}
+
+@media (max-width: 640px) {
+  .info-item summary {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .info-item > p,
+  .info-item .info-details {
+    padding: 0 1.25rem;
+  }
+
+  .info-item .info-details {
+    padding-bottom: 1rem;
+  }
+
+  .info-item > p:last-child {
+    padding-bottom: 1rem;
+  }
+}
+
+/* Suurilla näytöillä */
+@media (min-width: 1500px) {
+    .infoHero {
+    margin-bottom: 0;
+    min-height: 70vh;
+}
+  .infoimg {
+    margin-top: 0;
+  }
+}

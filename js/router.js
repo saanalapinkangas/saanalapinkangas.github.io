@@ -1,53 +1,113 @@
 const routes = {
-    "": "home",
+    "": "home",         // "#/" tai tyhjä -> home.html
     "/": "home",
     "/info": "info",
-    "/galleria": "galleria",
+    "/portfolio": "portfolio",
   };
+  
+  const projectPages = [
+    { slug: "projekti1", title: "Lasten interaktiivinen puuhakirja" },
+    { slug: "projekti2", title: "Pankkiautomaatin simulaatio" },
+    { slug: "projekti3", title: "Sivu elokuvaharrastajille" },
+    { slug: "opas_oys", title: "Opas sädehoitoon" },
+  ];
   
   const app = document.getElementById("app");
   
-  async function fetchPartial(name) {
-    // Yritä hakea erillisestä tiedostosta (toimii http(s):llä)
+  async function loadPartial(name) {
     try {
       const res = await fetch(`pages/${name}.html`, { cache: "no-cache" });
       if (!res.ok) throw new Error(res.statusText);
-      return await res.text();
-    } catch (err) {
-      // Jos ollaan file://-tilassa tai haku epäonnistui, käytä <template>-fallbackia
-      const tpl = document.getElementById(`tpl-${name}`);
-      if (tpl) return tpl.innerHTML.trim();
-      // Perustason 404
-      return `<h1>404</h1><p>Sivua ei löytynyt.</p>`;
+      const html = await res.text();
+      app.innerHTML = html;
+      if (name && name.startsWith("projects/")) {
+        const slug = name.split("/")[1];
+        injectProjectNavigation(slug);
+      }
+      updateActiveNav();
+      updateTitleFromH1();
+      // Alusta sivukohtaiset efektit (esim. gallerian IntersectionObserver)
+      if (typeof window.initGalleryReveal === 'function') {
+        window.initGalleryReveal();
+      }
+      if (typeof window.initPortfolioToggle === 'function') {
+        window.initPortfolioToggle();
+      }
+      if (typeof window.initPortfolioLightbox === 'function') {
+        window.initPortfolioLightbox();
+      }
+      window.scrollTo({ top: 0, behavior: "instant" });
+    } catch (e) {
+      app.innerHTML = `<h1>404</h1><p>Sivua ei löytynyt.</p>`;
     }
   }
   
-  function currentPath() {
-    const hash = location.hash.replace(/^#/, "");
-    return routes[hash] ?? "home";
+  function parseRoute() {
+    const hash = location.hash.replace(/^#/, ""); // esim. "/portfolio/example"
+    // 1) Suora osuma staattisiin reitteihin
+    if (routes[hash]) return routes[hash];
+    // 2) Dynaaminen projekti: "/portfolio/:slug"
+    const m = hash.match(/^\/portfolio\/([a-z0-9_-]+)$/i);
+    if (m) return `projects/${m[1]}`; // lataa pages/projects/:slug.html
+    return null;
+  }
+  
+  function injectProjectNavigation(slug) {
+    const nav = app.querySelector(".project-nav");
+    if (!nav) return;
+
+    const index = projectPages.findIndex(project => project.slug === slug);
+    if (index === -1) {
+      nav.innerHTML = "";
+      return;
+    }
+
+    nav.innerHTML = "";
+
+    const prev = projectPages[index - 1];
+    if (prev) {
+      const prevLink = document.createElement("a");
+      prevLink.href = `#/portfolio/${prev.slug}`;
+      prevLink.textContent = `← ${prev.title}`;
+      nav.appendChild(prevLink);
+    }
+
+    const next = projectPages[index + 1];
+    if (next) {
+      const nextLink = document.createElement("a");
+      nextLink.href = `#/portfolio/${next.slug}`;
+      nextLink.textContent = `${next.title} →`;
+      nav.appendChild(nextLink);
+    }
   }
   
   function updateActiveNav() {
+    const links = document.querySelectorAll("nav a");
     const current = location.hash.replace(/^#/, "") || "/";
-    document.querySelectorAll("nav a").forEach(a => {
+    links.forEach(a => {
       const target = a.getAttribute("href").replace(/^#/, "");
-      a.classList.toggle("active", target === current);
+      let isActive = false;
+      if (target === "/") {
+        isActive = current === "/";
+      } else if (target === "/portfolio") {
+        isActive = current === "/portfolio" || current.startsWith("/portfolio/");
+      } else {
+        isActive = target === current;
+      }
+      a.classList.toggle("active", isActive);
     });
   }
   
-  function updateTitle() {
+  function updateTitleFromH1() {
     const h1 = app.querySelector("h1");
-    if (h1) document.title = `${h1.textContent} — Portfolio`;
+    if (h1) document.title = `${h1.textContent} — Oma portfolio`;
   }
   
-  async function render() {
-    const name = currentPath();
-    app.innerHTML = await fetchPartial(name);
-    updateActiveNav();
-    updateTitle();
-    window.scrollTo({ top: 0, behavior: "instant" });
+  function onRouteChange() {
+    const page = parseRoute();
+    loadPartial(page || "home");
   }
   
-  window.addEventListener("hashchange", render);
-  window.addEventListener("DOMContentLoaded", render);
+  window.addEventListener("hashchange", onRouteChange);
+  window.addEventListener("DOMContentLoaded", onRouteChange);
   
