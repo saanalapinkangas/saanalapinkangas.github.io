@@ -42,6 +42,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--green);
+}
+
 
 .container {
     max-width: 100%;
@@ -70,12 +74,6 @@ a {
     padding-left: 10vw;
     padding-right: 10vw;
     min-height: 40vh;
-}
-
-@media (min-width: 1200px) {
-    .section-next {
-        min-height: 30vh;
-    }
 }
 
 

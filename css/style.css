@@ -2,14 +2,14 @@
 
 @import url('base.css');
 @import url('layout.css');
-@import url('components.css');
+@import url('header_nav.css');
 @import url('utilities.css');
 @import url('pages.css');
 @import url('gallery.css');
-@import url('mobile.css');
 @import url('portfolio_pages.css');
 @import url('nav-social-temp.css');
 @import url('info.css');
+@import url('mobile.css');  /* säilytä mobile.css viimeisenä */
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Montserrat perusfontti, Merriweather otsikot */

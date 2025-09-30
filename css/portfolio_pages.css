@@ -101,24 +101,6 @@
   margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
-  .project-gallery {
-    column-width: 400px;
-  }
-}
-
-@media (max-width: 640px) {
-  .project-gallery {
-    column-width: 100%;
-  }
-  .information {
-  width: 100%;
-}
-.videobg {
-  padding: 4rem 0;
-}
-}
-
 h2 {
   font-family: 'Merriweather', serif;
   font-weight: 500;

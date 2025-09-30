@@ -1,18 +1,138 @@
 @media (max-width: 800px) {
+  .section {
+    max-width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10vh;
+    min-height: 90vh;
+  }
 
-    .section {
-        max-width: 100%;
-        padding-left: 10vw;
-        padding-right: 10vw;
-        padding-top: 10vh;
-        min-height: 90vh;
-        }
+  .section-next {
+    max-width: 100%;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    min-height: 40vh;
+  }
 
-    .hero-content {
-      flex-direction: column; /* teksti päälle, kuva alle */
-    }
+  .hero-content {
+    flex-direction: column;
+  }
 
-    .hero-image {
-        max-width: 80vw; /* kuva pysyy pienehkönä */
-      }
+  .hero-image {
+    max-width: 80vw;
+  }
+
+  /* ======= Portfolion pääsivun asetuksia ======= */
+  .portfolio-gallery {
+    column-width: 180px;
+    column-gap: 1.25rem;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .item:nth-child(even) {
+    direction: ltr;
+  }
+
+  .section-portfolio {
+    margin-bottom: 8vw;
+    line-height: 1.5;
+    padding: 0;
+  }
+
+  .portfolio-toggle {
+    flex-direction: column;
+  }
+
+
+  /* ====== Minusta-sivu ======== */
+  .infoHero {
+    flex-direction: column;
+  }
+
+  .infoimg {
+    margin-top: 0;
+    max-width: 90vw;
+  }
+
+  .skillsFrame {
+    flex-direction: column;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .info-item summary {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .info-item>p,
+  .info-item .info-details {
+    padding: 0 1.25rem;
+  }
+
+  .info-item .info-details {
+    padding-bottom: 1rem;
+  }
+
+  .info-item>p:last-child {
+    padding-bottom: 1rem;
+  }
+
+  /* ========= Portfolion sivujen asetuksia ======= */
+  .project-meta {
+    flex-direction: column;
+  gap: 0;
+  /* Pienet avainsanat otsikon alla */
+}
+  .project-gallery {
+    column-width: 100%;
+  }
+
+  .information {
+    width: 100%;
+  }
+
+  .videobg {
+    padding: 4rem 0;
+  }
+  .project video {
+  max-width: 90%;
+  height: auto;
+}
+}
+
+
+@media (min-width: 1200px) {
+  .section-next {
+    min-height: 30vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-gallery {
+    column-width: 220px;
+    column-gap: 1.5rem;
+  }
+
+  .project-gallery {
+    column-width: 400px;
+  }
+}
+
+/* Suurilla näytöillä */
+@media (min-width: 1500px) {
+  .infoHero {
+    margin-bottom: 0;
+    min-height: 70vh;
+  }
+
+  .infoimg {
+    margin-top: 0;
+  }
 }
