@@ -3,6 +3,7 @@ const routes = {
     "/": "home",
     "/info": "info",
     "/portfolio": "portfolio",
+    "/yhteystiedot": "yhteystiedot",
   };
   
   const projectPages = [
