@@ -3,13 +3,21 @@ const routes = {
     "/": "home",
     "/info": "info",
     "/portfolio": "portfolio",
+    "/yhteystiedot": "yhteystiedot",
   };
   
   const projectPages = [
+    { slug: "tentrio", title: "Työtehtävien optimointisivu" },
+    { slug: "projekti3", title: "Sivu elokuvaharrastajille" },
+    { slug: "junnukokki", title: "Reseptisovellus lapsille" },
+    { slug: "mycollection", title: "Mediakeräilijän arkistosovellus" },
+    { slug: "verkkosivut", title: "Verkkosivuharjoitukset" },
     { slug: "projekti1", title: "Lasten interaktiivinen puuhakirja" },
     { slug: "projekti2", title: "Pankkiautomaatin simulaatio" },
-    { slug: "projekti3", title: "Sivu elokuvaharrastajille" },
-    { slug: "opas_oys", title: "Opas sädehoitoon" },
+    { slug: "lapinkettu", title: "Lapinkettu Oy" },
+    { slug: "lapinyliopisto", title: "Graafisen suunnittelun harjoitustyöt" },
+    { slug: "opas_oys", title: "Opas sädehoitoon tulevalle lapselle" },
+    { slug: "polttokaiverrus", title: "Polttokaiverrus" },
   ];
   
   const app = document.getElementById("app");

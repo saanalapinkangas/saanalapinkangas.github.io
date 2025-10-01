@@ -27,6 +27,15 @@
   .hero-content b{
     font-weight: 500;
 }
+
+.hero-content h4 {
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: var(--grey);
+  font-weight: normal;
+  margin-top: 2rem;
+  line-height: 2;
+}
   
   .hero-image {
     max-width: 35vw; /* kuva pysyy pienehkönä */
