@@ -1,8 +1,0 @@
-Lightbox laajennettiin niin, että se toimii kaikissa gallerioissa, joille lisäät tunnisteen data-lightbox-gallery. js/java.js:143 hakee nyt kaikki nuo kontit ja sitoo klikkauksen data-lightbox-item-elementtiin tai suoraan kuvaan, joten sama overlay voidaan jakaa useille sivuille ilman uutta koodia. Portfolio-sivun grafiikkaosioon lisättiin tunniste pages/portfolio.html:79, joten se jatkaa toimintaansa kuten ennen.
-
-Lisätäksesi lightboxin esimerkiksi example-3.html-sivulle:
-
-Ryhmittele halutut kuvat yhteiseen kääreeseen (esim. <div class="project-gallery" data-lightbox-gallery>).
-Jätä kuvat joko sellaisinaan tai kääri ne elementtiin, jolle lisäät data-lightbox-item (hyödyllinen, jos haluat klikkausalueen kattavan kuvatekstin tms.).
-Jos tarvitset kuvatekstin overlaylle, pidä teksti saman figure-elementin figcaptionissa tai tee se käsin: lightbox käyttää ensin figcaptionia, ja jos sitä ei ole, kuvan alt-tekstiä.
-Selaimessa kannattaa tarkistaa, että uudet kuvat aukeavat ja sulkeutuvat odotetusti. Seuraavaksi voit 1) soveltaa tunnisteen muihin sivujen kuvaryhmiin tai 2) harkita erillisiä kuvatekstejä, jos haluat lightboxiin erilaista sisältöä kuin alt-tekstissä.
